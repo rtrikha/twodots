@@ -1,0 +1,138 @@
+@font-face {
+        src: url(fonts/Carbon.ttf);
+        font-family: Carbon-Blod;
+        font-weight: 700;
+}
+
+@font-face {
+        src: url(fonts/SpaceMono-Bold.ttf);
+        font-family: Space-Mono;
+        font-weight: 700;
+}
+@font-face {
+        src: url(fonts/SpaceMono-Regular.ttf);
+        font-family: Space-Mono;
+        font-weight: 400;
+}
+h1 {
+        font-size: 24px;
+        color: white;
+        position: relative;
+        font-family: Carbon-Blod;
+        text-transform: uppercase;
+        text-align: center;
+        margin-block-end: 0rem;
+        margin-block-start: 0rem;
+}
+h2 {
+        font-size: 18px;
+        color: white;
+        position: relative;
+        font-family: Carbon-Blod;
+        text-transform: uppercase;
+        margin-block-end: 0rem;
+        margin-block-start: 0rem;
+}
+h3 {
+        font-size: 14px;
+        font-family: Space-Mono;
+        font-weight: 400;
+        color: #a6abbb;
+        width: inherit;
+        letter-spacing: -0.2px;
+        line-height: 22px;
+        margin-block-end: 0rem;
+        margin-block-start: 0rem;
+}
+
+body {
+        margin: 0;
+        background-color: #060606;
+        -webkit-font-smoothing: antialiased;
+        scroll-behavior: smooth;
+        font-size: 14px;
+        font-family: Space-Mono;
+        font-weight: 400;
+        color: #a6abbb;
+        overflow: hidden;
+}
+
+.content-wrapper {
+        padding-right: 120px;
+        padding-left: 120px;
+        display: block;
+}
+
+.hero-wrapper {
+        text-align: center;
+        padding-top: 120px;
+        position: relative;
+}
+
+.hero-wrapper .subheading{
+    padding-top: 24px;
+}
+
+.body-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+        text-align: left;
+        padding-top: 96px;
+}
+
+.body-wrapper > div {
+        box-sizing: border-box;
+        margin: 0px 24px 0 0;
+        text-align: left;
+}
+
+.body-wrapper .item{
+    padding: 16px 16px 16px 16px;
+}
+
+.body-wrapper .item .subheading{
+    padding-top: 16px;
+}
+
+/* 
+.header {
+    width: 100%;
+    height: 158px;
+    display: block;
+    padding-top: 0px;
+    position: sticky;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Carbon-Blod;
+    text-transform: uppercase;
+    color: white;
+} */
+
+/* Initiate the noise to the background */
+
+.background {
+        display: block;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        height: 100vh;
+        background: #060606;
+        text-align: center;
+}
+
+.noise {
+        z-index: 100;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 1;
+}
+
+/* Finish the noise to the background */
