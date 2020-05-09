@@ -89,12 +89,13 @@ body {
         padding-right: 120px;
         margin-block-end: 0rem;
         margin-block-start: 0rem;
+        z-index: 1000;
 }
 
 ul {
         padding-top: 0px;
         list-style: none;
-        font-size: 18px;
+        font-size: 16px;
         font-family: Carbon-Bold;
         text-transform: uppercase;
         color: white;
@@ -182,6 +183,44 @@ ul {
         padding-top: 8px;
 }
 
+.footer-wrapper{
+    display: flex;
+    position: absolute;
+    justify-content: left;
+    margin-left: auto;
+    z-index: 1000;
+    font-size: 12px;
+    color: #636772;
+    padding-left:120px ;
+    padding-right: 120px;
+    bottom: 14vh;
+    right: 0;
+}
+
+.footer-wrapper .gitHub{
+    margin-right: 40px;
+    opacity: 0.5;
+}
+.footer-wrapper .dribbble{
+    margin-right: 40px;
+    opacity: 0.5;
+}
+.footer-wrapper .medium{
+    opacity: 0.5;
+}
+
+.footer-wrapper :hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.footer-wrapper :link{
+    text-decoration: none;
+    color: #636772;
+}
+.footer-wrapper :visited{
+    text-decoration: none;
+    color: #636772;
+}
 /* 
 .header {
     width: 100%;
