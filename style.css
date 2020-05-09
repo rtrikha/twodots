@@ -44,30 +44,31 @@ h3 {
         margin-block-start: 0rem;
 }
 
+/* Initiate the noise to the background */
 .background {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    height: 100vh;
-    background: #0e0e0e;
-    text-align: center;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        height: 100vh;
+        background: #0e0e0e;
+        text-align: center;
 }
-
 .noise {
-    z-index: 100;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    opacity: 1;
+        z-index: 100;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 1;
 }
+/* Finish the noise to the background */
 
 body {
         margin: 0;
-        background-color:#0e0e0e;
+        background-color: #0e0e0e;
         -webkit-font-smoothing: antialiased;
         scroll-behavior: smooth;
         font-size: 14px;
@@ -75,16 +76,66 @@ body {
         font-weight: 400;
         color: #a6abbb;
         overflow: hidden;
+        display: flex;
         position: absolute;
+        letter-spacing: 0.28px;
 }
 
-.header-wrapper{
-    width: 100%;
-    height: 158px;
-    background-color: rebeccapurple;
-    position: sticky;
-    display: block;
-    padding-top: 0px;
+.header-wrapper {
+        height: auto;
+        display: flex;
+        padding-top: 72px;
+        padding-left: 120px;
+        padding-right: 120px;
+        margin-block-end: 0rem;
+        margin-block-start: 0rem;
+}
+
+ul {
+        padding-top: 0px;
+        list-style: none;
+        font-size: 18px;
+        font-family: Carbon-Bold;
+        text-transform: uppercase;
+        color: white;
+        align-items: center;
+}
+
+.logo {
+        margin-right: auto;
+        cursor: pointer;
+}
+.home {
+        margin-right: 40px;
+        color: #636772;
+        cursor: pointer;
+}
+.home:hover {
+        color: #a6abbb;
+}
+.home:active {
+        color: white;
+}
+.about {
+        margin-right: 40px;
+        color: #636772;
+        cursor: pointer;
+}
+.about:hover {
+        color: #a6abbb;
+}
+.about:active {
+        color: white;
+}
+.contact {
+        color: #636772;
+        cursor: pointer;
+}
+.contact:hover {
+        color: #a6abbb;
+}
+.contact:active {
+        color: white;
 }
 
 .content-wrapper {
@@ -95,16 +146,17 @@ body {
         background-color: none;
         overflow: hidden;
         z-index: 1000;
+        align-items: center;
+        padding-top: calc(20vh);
 }
 
 .hero-wrapper {
         text-align: center;
-        padding-top: 120px;
         position: relataive;
 }
 
-.hero-wrapper .subheading{
-    padding-top: 24px;
+.hero-wrapper .subheading {
+        padding-top: 24px;
 }
 
 .body-wrapper {
@@ -122,12 +174,12 @@ body {
         text-align: left;
 }
 
-.body-wrapper .item{
-    padding: 16px 16px 16px 16px;
+.body-wrapper .item {
+        padding: 16px 16px 16px 16px;
 }
 
-.body-wrapper .item .subheading{
-    padding-top: 16px;
+.body-wrapper .item .subheading {
+        padding-top: 8px;
 }
 
 /* 
@@ -145,9 +197,3 @@ body {
     text-transform: uppercase;
     color: white;
 } */
-
-/* Initiate the noise to the background */
-
-
-
-/* Finish the noise to the background */
