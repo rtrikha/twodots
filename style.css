@@ -1,9 +1,8 @@
 @font-face {
         src: url(fonts/Carbon.ttf);
-        font-family: Carbon-Blod;
+        font-family: Carbon-Bold;
         font-weight: 700;
 }
-
 @font-face {
         src: url(fonts/SpaceMono-Bold.ttf);
         font-family: Space-Mono;
@@ -18,7 +17,7 @@ h1 {
         font-size: 24px;
         color: white;
         position: relative;
-        font-family: Carbon-Blod;
+        font-family: Carbon-Bold;
         text-transform: uppercase;
         text-align: center;
         margin-block-end: 0rem;
@@ -28,7 +27,7 @@ h2 {
         font-size: 18px;
         color: white;
         position: relative;
-        font-family: Carbon-Blod;
+        font-family: Carbon-Bold;
         text-transform: uppercase;
         margin-block-end: 0rem;
         margin-block-start: 0rem;
@@ -45,9 +44,30 @@ h3 {
         margin-block-start: 0rem;
 }
 
+.background {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    height: 100vh;
+    background: #0e0e0e;
+    text-align: center;
+}
+
+.noise {
+    z-index: 100;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 1;
+}
+
 body {
         margin: 0;
-        background-color: #060606;
+        background-color:#0e0e0e;
         -webkit-font-smoothing: antialiased;
         scroll-behavior: smooth;
         font-size: 14px;
@@ -55,18 +75,32 @@ body {
         font-weight: 400;
         color: #a6abbb;
         overflow: hidden;
+        position: absolute;
+}
+
+.header-wrapper{
+    width: 100%;
+    height: 158px;
+    background-color: rebeccapurple;
+    position: sticky;
+    display: block;
+    padding-top: 0px;
 }
 
 .content-wrapper {
         padding-right: 120px;
         padding-left: 120px;
         display: block;
+        position: absolute;
+        background-color: none;
+        overflow: hidden;
+        z-index: 1000;
 }
 
 .hero-wrapper {
         text-align: center;
         padding-top: 120px;
-        position: relative;
+        position: relataive;
 }
 
 .hero-wrapper .subheading{
@@ -107,32 +141,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: Carbon-Blod;
+    font-family: Carbon-Bold;
     text-transform: uppercase;
     color: white;
 } */
 
 /* Initiate the noise to the background */
 
-.background {
-        display: block;
-        align-items: center;
-        justify-content: center;
-        flex-flow: column;
-        height: 100vh;
-        background: #060606;
-        text-align: center;
-}
 
-.noise {
-        z-index: 100;
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        opacity: 1;
-}
 
 /* Finish the noise to the background */
