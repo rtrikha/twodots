@@ -1,0 +1,24 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#212121;
+    height: 100%;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.text{
+    font-weight:100;
+    font-size:28px;
+    color: #FAFAFA;
+}
+  
+.dud{
+    color:#757575;
+}

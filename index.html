@@ -8,44 +8,46 @@
                 </head>
 
                 <body>
-                        <div role="main" class="background">
-                                <canvas id="noise" class="noise"> </canvas>
-                        </div>
                         <div class="main-wrapper">
                                 <ul class="header-wrapper" role="navigation">
-                                        <a class="logo">
+                                        <!-- <a class="logo">
                                                 <img src="Assets/bolt.svg" alt="logo" />
-                                        </a>
-                                        <li class="home">Home</li>
-                                        <li class="about">About</li>
-                                        <li class="contact">Contact</li>
+                                        </a> -->
+                                        <li class="home">HOME</li>
                                 </ul>
 
                                 <div class="content-wrapper">
                                         <div class="hero-wrapper">
-                                                <div class="heading">
+                                                <div class="heading" id="typed-strings">
                                                         <h1>
                                                                 Hi, I'm Raunak Trikha
                                                         </h1>
                                                 </div>
+                                                <span class="heading" id="typed"></span>
                                                 <div class="subheading">
                                                         <h3>
-                                                                A hobbyist who loves solving real-life problems with
-                                                                aesthetically
+                                                                A hobbyist who loves solving real-life problems
+                                                                withaesthetically
                                                                 <br />pleasing and logical solutions. Dabbling in all
                                                                 things
-                                                                <span style="color: #c3c7d1;"
+                                                                <span style="color: #e4e7ed;"
                                                                         ><b>computer science</b></span
                                                                 >,<br />
-                                                                <span style="color: #c3c7d1;"><b>art</b></span
-                                                                >, <span style="color: #c3c7d1;"><b>math</b></span
+                                                                <span style="color: #e4e7ed;"><b>art</b></span
+                                                                >, <span style="color: #e4e7ed;"><b>math</b></span
                                                                 >, and many
-                                                                <span style="color: #c3c7d1;"><b>other things</b></span>
+                                                                <span style="color: #e4e7ed;"><b>other things</b></span>
                                                                 that sound fancy and crazy.
                                                         </h3>
                                                 </div>
                                         </div>
 
+                                        <div class="show-more-wrapper">
+                                                <button class="show-more" type="button">Show more</button>
+                                                <a class="arrow">
+                                                        <img src="Assets/arrow.svg" alt="" />
+                                                </a>
+                                        </div>
                                         <section class="body-wrapper">
                                                 <div class="item">
                                                         <div class="heading">
@@ -55,9 +57,17 @@
                                                         </div>
                                                         <div class="subheading">
                                                                 <h3>
-                                                                        I geek out on Design Systems, Human Psychology
-                                                                        and Smoothies. I make stuff right and make right
-                                                                        stuff. I deeply care about music and art.
+                                                                        I geek out on
+                                                                        <span style="color: #e4e7ed;"
+                                                                                ><b>Design Systems</b></span
+                                                                        >,
+                                                                        <span style="color: #e4e7ed;"
+                                                                                ><b>Human Psychology</b></span
+                                                                        >, and
+                                                                        <span style="color: #e4e7ed;"
+                                                                                ><b>Smoothies</b></span
+                                                                        >. I make stuff right and make right stuff. I
+                                                                        deeply care about music and art.
                                                                 </h3>
                                                         </div>
                                                 </div>
@@ -70,9 +80,13 @@
                                                         </div>
                                                         <div class="subheading">
                                                                 <h3>
-                                                                        To justify my degree & ostentatious interest in
-                                                                        design. Also I think, Data shapes experiences...
-                                                                        analayse through data to solve through design.
+                                                                        To justify my
+                                                                        <span style="color: #e4e7ed;"
+                                                                                ><b>degree</b></span
+                                                                        >
+                                                                        & ostentatious interest in design. Also I think,
+                                                                        Data shapes experiences... analayse through data
+                                                                        and solve through design.
                                                                 </h3>
                                                         </div>
                                                 </div>
@@ -85,13 +99,86 @@
                                                         </div>
                                                         <div class="subheading">
                                                                 <h3>
-                                                                        I put good ideas on Medium and bad ideas on
-                                                                        Twitter. Asking random shit on reddit and adding
-                                                                        good music on my playlist.
+                                                                        I put good ideas on
+                                                                        <span class="link" style="color: #e4e7ed;"
+                                                                                ><b
+                                                                                        ><a
+                                                                                                href="https://medium.com/@rtrikha"
+                                                                                                target="_blank"
+                                                                                                >Medium</a
+                                                                                        ></b
+                                                                                ></span
+                                                                        >
+                                                                        and bad ideas on
+                                                                        <span class="link" style="color: #e4e7ed;"
+                                                                                ><b
+                                                                                        ><a
+                                                                                                href="https://twitter.com/rstrikha"
+                                                                                                target="_blank"
+                                                                                                >Twitter</a
+                                                                                        ></b
+                                                                                ></span
+                                                                        >. Asking random shit on reddit and adding good
+                                                                        music on my
+                                                                        <span class="link" style="color: #e4e7ed;"
+                                                                                ><b
+                                                                                        ><a
+                                                                                                href="https://music.apple.com/in/playlist/the-last-cigarette/pl.u-6mo4aW4HBPaW6jl"
+                                                                                                target="_blank"
+                                                                                                >playlist</a
+                                                                                        ></b
+                                                                                ></span
+                                                                        >.
                                                                 </h3>
                                                         </div>
                                                 </div>
                                         </section>
+
+                                        <div class="projects">
+                                                <div class="heading">SELECTED PROJECTS</div>
+                                                <ul class="projects-list" role="navigation">
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Garden Offshoot</div>
+                                                                <div class="subheading">
+                                                                        ever evolving design system to solve the
+                                                                        problems of component based design
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Properly Operations</div>
+                                                                <div class="subheading">
+                                                                        solution for hospitality verticals to solve
+                                                                        their task allocation, escalation handling, &
+                                                                        hierarchical structural problems
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Rubber Numbers</div>
+                                                                <div class="subheading">
+                                                                        fintech solution for holistic view of
+                                                                        organisation
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Music:ED</div>
+                                                                <div class="subheading">
+                                                                        overhauling the entire experience of a website
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Blade Runner</div>
+                                                                <div class="subheading">
+                                                                        Arcade-Platform game made using Unity
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Asilverse</div>
+                                                                <div class="subheading">
+                                                                        branding refinement and web solution
+                                                                </div>
+                                                        </div>
+                                                </ul>
+                                        </div>
                                 </div>
 
                                 <div class="footer-wrapper" role="navigation">
@@ -101,20 +188,23 @@
                                                         <a href="https://github.com/rtrikha" target="_blank">GitHub</a>
                                                 </div>
                                                 <div class="dribbble">
-                                                        <a href="https://dribbble.com/trikha" target="_blank"
+                                                        <a href="https://dribbble.com/rtrikha" target="_blank"
                                                                 >Dribbble</a
                                                         >
                                                 </div>
                                                 <div class="medium">
-                                                        <a href="https://medium.com/@raunakstrikha" target="_blank"
-                                                                >Medium</a
-                                                        >
+                                                        <a href="https://medium.com/@rtrikha" target="_blank">Medium</a>
                                                 </div>
                                         </div>
                                 </div>
                         </div>
                 </body>
-                <script src="noise.js"></script>
                 <script src="script.js"></script>
+                <script src="typed.js"></script>
+                <script>
+                        var typed = new Typed("#typed", {
+                                stringsElement: "#typed-strings",
+                        });
+                </script>
         </html>
 </html>
