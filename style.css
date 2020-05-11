@@ -127,7 +127,7 @@ body {
         padding-left: 8vw;
         animation-name: move-footer;
         animation-duration: 1s;
-        animation-timing-function: cubic-bezier(.59,0,.42,.99);
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
         animation-delay: 4s;
         animation-fill-mode: forwards;
         transform: translatey(4vh);
@@ -188,6 +188,7 @@ ul {
 
 .hero-wrapper {
         position: relataive;
+        width: 40vw;
 }
 
 .hero-wrapper .subheading {
@@ -195,7 +196,7 @@ ul {
         opacity: 0;
         animation-name: show-objects;
         animation-duration: 0.6s;
-        animation-timing-function: cubic-bezier(.59,0,.42,.99);
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
         animation-delay: 3s;
         animation-fill-mode: forwards;
 }
@@ -320,7 +321,7 @@ ul {
 .move-hover-projects :hover + .subheading {
         animation: hover-me;
         animation-duration: 0.5s;
-        animation-timing-function: cubic-bezier(.59,0,.42,.99);
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
         animation-fill-mode: forwards;
 }
 
@@ -375,11 +376,11 @@ ul {
 
 .arrow {
         background-repeat: no-repeat;
-        margin-top: 14px;
+        margin-top: 12px;
         padding-left: 8px;
         animation: move-arrow;
         animation-duration: 1s;
-        animation-timing-function: cubic-bezier(.59,0,.42,.99);
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
         animation-iteration-count: infinite;
 }
 
@@ -389,7 +390,7 @@ ul {
         opacity: 0;
         animation-name: show-objects;
         animation-duration: 0.3s;
-        animation-timing-function: cubic-bezier(.59,0,.42,.99);
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
         animation-delay: 4s;
         animation-fill-mode: forwards;
 }
@@ -404,4 +405,20 @@ ul {
         100% {
                 transform: translate(0px);
         }
+}
+
+.tooltip span {
+    display:none;
+    color:white;
+    position: relative;
+    background-color: #0D0F10;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
 }
