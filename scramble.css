@@ -1,0 +1,33 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    line-height: 1.33;
+    background: #141E27;
+    margin: 0;
+    color: #f2f2f2;
+}
+
+.terminal {
+    font-weight: 300;
+    font-size: 12px;
+    margin: 50px auto;
+    max-width: 550px;
+    width: 80%;
+}
+
+.light {
+    /*color: #888;*/
+    opacity: 0.3;
+}
+
+.table {
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    display: table-cell;
+    padding: 2px 5px;
+}

@@ -1,9 +1,8 @@
 @font-face {
         src: url(fonts/Carbon.ttf);
-        font-family: Carbon-Blod;
+        font-family: Carbon-Bold;
         font-weight: 700;
 }
-
 @font-face {
         src: url(fonts/SpaceMono-Bold.ttf);
         font-family: Space-Mono;
@@ -15,62 +14,191 @@
         font-weight: 400;
 }
 h1 {
-        font-size: 24px;
+        font-size: 20px;
         color: white;
         position: relative;
-        font-family: Carbon-Blod;
+        font-family: Carbon-Bold;
         text-transform: uppercase;
         text-align: center;
         margin-block-end: 0rem;
         margin-block-start: 0rem;
 }
+
 h2 {
-        font-size: 18px;
+        font-size: 16px;
         color: white;
+        opacity: 0.3;
         position: relative;
-        font-family: Carbon-Blod;
+        font-family: Carbon-Bold;
         text-transform: uppercase;
         margin-block-end: 0rem;
         margin-block-start: 0rem;
 }
 h3 {
-        font-size: 14px;
+        font-size: 13px;
         font-family: Space-Mono;
         font-weight: 400;
-        color: #a6abbb;
+        color: #d6dae2;
         width: inherit;
         letter-spacing: -0.2px;
-        line-height: 22px;
+        line-height: 21px;
         margin-block-end: 0rem;
         margin-block-start: 0rem;
 }
 
 body {
-        margin: 0;
-        background-color: #060606;
+        background-color: #121516;
         -webkit-font-smoothing: antialiased;
-        scroll-behavior: smooth;
-        font-size: 14px;
+        font-size: 13px;
         font-family: Space-Mono;
         font-weight: 400;
         color: #a6abbb;
         overflow: hidden;
+        display: flex;
+        letter-spacing: 0.28px;
+        z-index: 10000;
+        left: 0;
+        top: 0;
+        margin: 0;
+}
+
+.hero-wrapper #typed {
+        font-size: 20px;
+        color: white;
+        position: relative;
+        font-family: Carbon-Bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin-block-end: 0rem;
+        margin-block-start: 0rem;
+}
+
+.hero-wrapper .typed-cursor {
+        font-size: 18px;
+        font-weight: 900;
+}
+
+.subheading span :hover {
+        color: white;
+        cursor: pointer;
+}
+
+.main-wrapper {
+        display: absolute;
+        width: 100vw;
+        height: 100vh;
+        padding-right: 8vw;
+        padding-left: 8vw;
+}
+
+.header-wrapper {
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        padding-top: calc(6vh);
+        margin-block-end: 0rem;
+        margin-block-start: 0rem;
+        padding-inline-start: 0;
 }
 
 .content-wrapper {
-        padding-right: 120px;
-        padding-left: 120px;
+        position: absolute;
+        z-index: 1000;
+        align-items: center;
+        padding-top: 8vh;
         display: block;
+        height: auto;
+        left: 0;
+        padding-left: 8vw;
+        padding-right: 8vw;
+}
+
+.footer-wrapper {
+        display: flex;
+        position: fixed;
+        z-index: 1000;
+        font-size: 12px;
+        color: #636772;
+        bottom: 2vh;
+        width: auto;
+        right: 0;
+        left: 0;
+        padding-right: 8vw;
+        padding-left: 8vw;
+        animation-name: move-footer;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+        transform: translatey(4vh);
+}
+
+@keyframes move-footer {
+        from {
+                transform: translatey(4vh);
+        }
+        to {
+                transform: translatey(0vh);
+        }
+}
+
+ul {
+        padding-top: 0px;
+        list-style: none;
+        font-size: 16px;
+        font-family: Carbon-Bold;
+        color: white;
+        align-items: center;
+        padding-inline-start: 0;
+}
+
+.logo {
+        margin-right: auto;
+        cursor: pointer;
+        z-index: 100;
+        color: lawngreen;
+}
+
+.logo :hover {
+        opacity: 1;
+}
+
+.home {
+        color: #636772;
+        cursor: pointer;
+        z-index: 100;
+}
+.home:hover {
+        color: #a6abbb;
+}
+.home:active {
+        color: white;
+}
+.home {
+        color: #636772;
+        cursor: pointer;
+        z-index: 100;
+}
+.home:hover {
+        color: #a6abbb;
+}
+.home:active {
+        color: white;
 }
 
 .hero-wrapper {
-        text-align: center;
-        padding-top: 120px;
-        position: relative;
+        position: relataive;
+        width: 40vw;
 }
 
-.hero-wrapper .subheading{
-    padding-top: 24px;
+.hero-wrapper .subheading {
+        padding-top: 16px;
+        opacity: 0;
+        animation-name: show-objects;
+        animation-duration: 0.6s;
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
 }
 
 .body-wrapper {
@@ -79,60 +207,219 @@ body {
         justify-content: space-between;
         margin: auto;
         text-align: left;
-        padding-top: 80px;
-}
-
-.body-wrapper > div {
-        box-sizing: border-box;
-        margin: 0px 24px 0 0;
-        text-align: left;
-}
-
-.body-wrapper .item{
-    padding: 16px 16px 16px 16px;
-}
-
-.body-wrapper .item .subheading{
-    padding-top: 16px;
-}
-
-/* 
-.header {
-    width: 100%;
-    height: 158px;
-    display: block;
-    padding-top: 0px;
-    position: sticky;
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: Carbon-Blod;
-    text-transform: uppercase;
-    color: white;
-} */
-
-/* Initiate the noise to the background */
-
-.background {
-        display: block;
-        align-items: center;
-        justify-content: center;
-        flex-flow: column;
-        height: 100vh;
-        background: #060606;
-        text-align: center;
-}
-
-.noise {
-        z-index: 100;
         position: relative;
-        top: 0;
+        margin-top: 6vh;
+}
+
+.body-wrapper .item .subheading {
+        padding-top: 8px;
+        margin-right: 48px;
+}
+
+.body-wrapper .item1 .subheading {
+        padding-top: 8px;
+}
+
+.footer-wrapper .right-content {
+        display: flex;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: Carbon-Bold;
+}
+
+#date-time {
+        opacity: 0.5;
+        cursor: auto;
+        text-transform: uppercase;
+        font-family: Carbon-Bold;
         left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
+        margin-right: auto;
+}
+
+.footer-wrapper .gitHub {
+        margin-right: 40px;
+        opacity: 0.5;
+}
+.footer-wrapper .dribbble {
+        margin-right: 40px;
+        opacity: 0.5;
+}
+.footer-wrapper .medium {
+        opacity: 0.5;
+}
+
+.footer-wrapper :hover {
         opacity: 1;
 }
+.footer-wrapper :link {
+        text-decoration: none;
+        color: #636772;
+}
+.footer-wrapper :visited {
+        text-decoration: none;
+        color: #636772;
+}
 
-/* Finish the noise to the background */
+.subheading .link :link {
+        text-decoration: none;
+        color: #c3c7d1;
+}
+
+.subheading .link :visited {
+        text-decoration: none;
+        color: inherit;
+}
+
+@keyframes show-objects {
+        to {
+                opacity: 1;
+        }
+}
+
+.projects {
+        margin-top: 6vh;
+}
+
+.projects-list {
+        margin-block-end: 0;
+        margin-block-start: 0;
+        margin-top: 8px;
+}
+
+.projects .heading {
+        font-size: 16px;
+        color: white;
+        opacity: 0.3;
+        font-family: Carbon-Bold;
+        margin-block-end: 0rem;
+        margin-block-start: 0rem;
+}
+
+.projects .move-hover-projects {
+        display: flex;
+        padding-top: 0.5vh;
+}
+
+.projects-list .heading {
+        font-size: 13px;
+        font-family: Space-Mono;
+        font-weight: 400;
+        opacity: 1;
+        color: #d6dae2;
+        letter-spacing: -0.2px;
+        line-height: 21px;
+        margin-block-end: 0rem;
+        margin-block-start: 0rem;
+        cursor: pointer;
+}
+
+.move-hover-projects :hover {
+        color: white;
+        font-weight: 600;
+}
+
+.move-hover-projects :hover + .subheading {
+        animation: hover-me;
+        animation-duration: 0.5s;
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+        animation-fill-mode: forwards;
+}
+
+.projects-list .subheading {
+        font-size: 11px;
+        font-family: Space-Mono;
+        font-weight: 500;
+        opacity: 0;
+        color: #d6dae2;
+        letter-spacing: -0.2px;
+        line-height: 23px;
+        margin-block-end: 0rem;
+        margin-block-start: 0rem;
+        margin-left: 6px;
+}
+
+@keyframes hover-me {
+        from {
+                opacity: 0;
+        }
+        to {
+                opacity: 0.6;
+                transform: translateX(3px);
+        }
+}
+
+.show-more {
+        background-color: transparent;
+        font-family: Carbon-Bold;
+        font-size: 14px;
+        color: #d6dae2;
+        text-transform: uppercase;
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+        padding-top: 2vh;
+}
+
+.content-wrapper :hover + .arrow {
+        color: white;
+}
+
+.content-wrapper .show-more-wrapper :hover {
+        color: white;
+}
+
+.content-wrapper .show-more-wrapper :focus {
+        outline: none;
+        border: none;
+}
+
+.arrow {
+        background-repeat: no-repeat;
+        margin-top: 12px;
+        padding-left: 8px;
+        animation: move-arrow;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+        animation-iteration-count: infinite;
+}
+
+.show-more-wrapper {
+        display: flex;
+        padding-top: 4vh;
+        opacity: 0;
+        animation-name: show-objects;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+}
+
+@keyframes move-arrow {
+        0% {
+                transform: translate(0px);
+        }
+        50% {
+                transform: translate(2px);
+        }
+        100% {
+                transform: translate(0px);
+        }
+}
+
+.tooltip span {
+    display:none;
+    color:white;
+    position: relative;
+    background-color: #0D0F10;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 11px;
+    z-index: 999;
+}
+
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+}

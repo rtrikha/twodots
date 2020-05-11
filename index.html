@@ -5,33 +5,48 @@
                         <meta charset="utf-8" />
                         <title>Portfolio</title>
                         <link rel="stylesheet" href="style.css" />
+                        <script src = "https://rawgit.com/moon/tween/master/tween.js"></script>
                 </head>
 
                 <body>
-                        <div class="main-wrapper">
-                                <div class="header-wrapper"></div>
+                        <div class="text">this is test</div>
+                        <div class="main-wrapper" id="testid">
+                                <ul class="header-wrapper" role="navigation">
+                                        <!-- <a class="logo">
+                                                <img src="Assets/bolt.svg" alt="logo" />
+                                        </a> -->
+                                        <li class="home">HOME</li>
+                                </ul>
 
                                 <div class="content-wrapper">
-                                        <div class="hero-wrapper">
-                                                <div class="heading">
+                                        <div class="hero-wrapper" id="hero-wrapper">
+                                                <div class="heading" id="typed-strings">
                                                         <h1>
                                                                 Hi, I'm Raunak Trikha
                                                         </h1>
                                                 </div>
-                                                <div class="subheading">
-                                                        <h3>
-                                                                A hobbyist who loves solving real-life problems with
-                                                                aesthetically
-                                                                <br />pleasing and logical solutions. Dabbling in all
-                                                                things <b>computer science</b>,<br />
-                                                                art, math, and many other things that sound fancy and
-                                                                crazy.
-                                                        </h3>
+                                                <span class="heading" id="typed"></span>
+                                                <div class="subheading" id="blackbox2">
+                                                        
                                                 </div>
                                         </div>
 
+                                        <div class="show-more-wrapper">
+                                                <div
+                                                        onclick="classToggle()"
+                                                        class="show-more"
+                                                        type="button"
+                                                        id="show-more"
+                                                >
+                                                        Show more
+                                                </div>
+                                                <a class="arrow">
+                                                        <img src="Assets/arrow.svg" alt="" />
+                                                </a>
+                                        </div>
+
                                         <section class="body-wrapper">
-                                                <div class="item">
+                                                <div class="item" id="item1">
                                                         <div class="heading">
                                                                 <h2>
                                                                         What?
@@ -39,14 +54,22 @@
                                                         </div>
                                                         <div class="subheading">
                                                                 <h3>
-                                                                        I geek out on Design Systems, Human Psychology
-                                                                        and Smoothies. I make stuff right and make right
-                                                                        stuff. I deeply care about music and art.
+                                                                        I geek out on
+                                                                        <span style="color: #e4e7ed;"
+                                                                                ><b>Design Systems</b></span
+                                                                        >,
+                                                                        <span style="color: #e4e7ed;"
+                                                                                ><b>Human Psychology</b></span
+                                                                        >, and
+                                                                        <span style="color: #e4e7ed;"
+                                                                                ><b>Smoothies</b></span
+                                                                        >. I make stuff right and make right stuff. I
+                                                                        deeply care about music, art and my dog.
                                                                 </h3>
                                                         </div>
                                                 </div>
 
-                                                <div class="item">
+                                                <div class="item" id="item2">
                                                         <div class="heading">
                                                                 <h2>
                                                                         Why?
@@ -54,14 +77,18 @@
                                                         </div>
                                                         <div class="subheading">
                                                                 <h3>
-                                                                        To justify my degree & ostentatious interest in
-                                                                        design. Also I think, Data shapes experiences...
-                                                                        analayse through data to solve through design.
+                                                                        To justify my
+                                                                        <span style="color: #e4e7ed;"
+                                                                                ><b>degree</b></span
+                                                                        >
+                                                                        & ostentatious interest in design. Also I think,
+                                                                        Data shapes experiences... analayse through data
+                                                                        and solve through design.
                                                                 </h3>
                                                         </div>
                                                 </div>
 
-                                                <div class="item">
+                                                <div class="item1" id="item3">
                                                         <div class="heading">
                                                                 <h2>
                                                                         How?
@@ -69,23 +96,114 @@
                                                         </div>
                                                         <div class="subheading">
                                                                 <h3>
-                                                                        I put good ideas on Medium and bad ideas on
-                                                                        Instgram. Asking random shit on reddit and
-                                                                        adding good music on my playlist.
+                                                                        I put good ideas on
+                                                                        <span class="link" style="color: #e4e7ed;"
+                                                                                ><b
+                                                                                        ><a
+                                                                                                href="https://medium.com/@rtrikha"
+                                                                                                target="_blank"
+                                                                                                >Medium</a
+                                                                                        ></b
+                                                                                ></span
+                                                                        >
+                                                                        and bad ideas on
+                                                                        <span class="link" style="color: #e4e7ed;"
+                                                                                ><b
+                                                                                        ><a
+                                                                                                href="https://twitter.com/rstrikha"
+                                                                                                target="_blank"
+                                                                                                >Twitter</a
+                                                                                        ></b
+                                                                                ></span
+                                                                        >. Asking random shit on reddit and adding good
+                                                                        music to my
+                                                                        <span class="link" style="color: #e4e7ed;"
+                                                                                ><b
+                                                                                        ><a
+                                                                                                href="https://music.apple.com/in/playlist/the-last-cigarette/pl.u-6mo4aW4HBPaW6jl"
+                                                                                                target="_blank"
+                                                                                                >playlist</a
+                                                                                        ></b
+                                                                                ></span
+                                                                        >.
                                                                 </h3>
                                                         </div>
                                                 </div>
                                         </section>
+
+                                        <div class="projects" id="projects">
+                                                <div class="heading">SELECTED PROJECTS</div>
+                                                <ul class="projects-list" role="navigation">
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Garden Offshoot</div>
+                                                                <div class="subheading">
+                                                                        ever evolving design system to solve the
+                                                                        problems of component based design
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Properly Operations</div>
+                                                                <div class="subheading">
+                                                                        solution for hospitality verticals to solve
+                                                                        their task allocation, escalation handling, &
+                                                                        hierarchical structural problems
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Rubber Numbers</div>
+                                                                <div class="subheading">
+                                                                        fintech solution for holistic view of
+                                                                        organisation
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Music:ED</div>
+                                                                <div class="subheading">
+                                                                        overhauling the entire experience of a website
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Blade Runner</div>
+                                                                <div class="subheading">
+                                                                        Arcade-Platform game made using Unity
+                                                                </div>
+                                                        </div>
+                                                        <div class="move-hover-projects">
+                                                                <div class="heading">Asilverse</div>
+                                                                <div class="subheading">
+                                                                        branding refinement and web solution
+                                                                </div>
+                                                        </div>
+                                                </ul>
+                                        </div>
                                 </div>
 
-                                <div class="footer-wrapper"></div>
-
-                                <main role="main" class="background">
-                                        <canvas id="noise" class="noise"></canvas>
-                                </main>
+                                <div class="footer-wrapper" role="navigation">
+                                        <div id="date-time"></div>
+                                        <div class="right-content">
+                                                <div class="gitHub">
+                                                        <a href="https://github.com/rtrikha" target="_blank">GitHub</a>
+                                                </div>
+                                                <div class="dribbble">
+                                                        <a href="https://dribbble.com/rtrikha" target="_blank"
+                                                                >Dribbble</a
+                                                        >
+                                                </div>
+                                                <div class="medium">
+                                                        <a href="https://medium.com/@rtrikha" target="_blank">Medium</a>
+                                                </div>
+                                        </div>
+                                </div>
                         </div>
                 </body>
-                <!-- <script src="noise.js"></script> -->
                 <script src="script.js"></script>
+                <script src="typed.js"></script>
+                <script src = "newbox.js"></script>
+
+                <script>
+                        var typed = new Typed("#typed", {
+                                stringsElement: "#typed-strings",
+                        });
+                </script>
         </html>
 </html>
