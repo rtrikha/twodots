@@ -5,10 +5,12 @@
                         <meta charset="utf-8" />
                         <title>Portfolio</title>
                         <link rel="stylesheet" href="style.css" />
+                        <script src = "https://rawgit.com/moon/tween/master/tween.js"></script>
                 </head>
 
                 <body>
-                        <div class="main-wrapper">
+                        <div class="text">this is test</div>
+                        <div class="main-wrapper" id="testid">
                                 <ul class="header-wrapper" role="navigation">
                                         <!-- <a class="logo">
                                                 <img src="Assets/bolt.svg" alt="logo" />
@@ -24,13 +26,8 @@
                                                         </h1>
                                                 </div>
                                                 <span class="heading" id="typed"></span>
-                                                <div class="subheading">
-                                                        <h3>
-                                                                A hobbyist who loves solving real-life problems
-                                                                withaesthetically
-                                                                pleasing and logical solutions. Dabbling in all
-                                                                things  <span class= "tooltip" style="color: #e4e7ed;"><b>computer science</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span>, <span class= "tooltip" style="color: #e4e7ed;"><b>art</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span>, <span class= "tooltip" style="color: #e4e7ed;"><b>math</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span> and <span class= "tooltip" style="color: #e4e7ed;"><b>other things</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span> that sound fancy and crazy.
-                                                        </h3>
+                                                <div class="subheading" id="blackbox2">
+                                                        
                                                 </div>
                                         </div>
 
@@ -201,6 +198,8 @@
                 </body>
                 <script src="script.js"></script>
                 <script src="typed.js"></script>
+                <script src = "newbox.js"></script>
+
                 <script>
                         var typed = new Typed("#typed", {
                                 stringsElement: "#typed-strings",

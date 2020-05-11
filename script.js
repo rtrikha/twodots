@@ -2,15 +2,6 @@
 
 classToggle();
 
-// function formatAMPM() {
-//         var d = new Date(),
-//                 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-//                 days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-//         return "v2.1 | " + months[d.getMonth()] + " " + d.getDate() + " " + d.getFullYear();
-// }
-
-document.getElementById("date-time").innerHTML = formatAMPM();
-
 function showRestContent() {}
 
 function classToggle() {
@@ -35,8 +26,6 @@ function classToggle() {
         }
 }
 
-// var tooltipSpan1 = document.getElementById("tooltip-span-1");
-// var tooltipSpan2 = document.getElementById("tooltip-span-2");
 
 var tooltips = document.querySelectorAll('.tooltip span');
 

@@ -415,6 +415,7 @@ ul {
     padding: 16px;
     border-radius: 4px;
     font-size: 11px;
+    z-index: 999;
 }
 
 .tooltip:hover span {
