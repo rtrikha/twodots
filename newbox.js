@@ -1,3 +1,5 @@
+var scramble;
+
 var scramble = "█+÷~.–<>/\\{}".split("");
 var cursors = "___█".split("");
 var cursor = "+";
@@ -6,10 +8,6 @@ function type(el, content, duration, delay) {
         var proxy = { progress: 0 };
         var length = content.length;
         var output = [];
-
-        for (var i = 0, n = content.length; i < n; i++) {
-                output[i] = "&nbsp;";
-        }
 
         Tween.to(proxy, duration || 1.0, { progress: 1 })
                 .wait(delay || 0)
@@ -38,21 +36,22 @@ function type(el, content, duration, delay) {
                                         output[i] = content.substr(i, 1);
                                 }
                         }
-
                         output[~~n3] = cursor;
 
                         el.innerHTML = output.join("");
                 })
                 .done(function () {
                         el.innerHTML = content;
+
+
                 });
 }
 
-var block = document.querySelector("#blackbox2");
+var block = document.querySelector("#blackbox");
 
 function addLine(a, b, c) {
-        var duration = 0.33;
-        var step = 0.3;
+        var duration = 1;
+        var step = 0;
 
         var row, cell;
         row = document.createElement("div");
@@ -66,13 +65,19 @@ function addLine(a, b, c) {
         block.appendChild(row);
 }
 
+
 var step = 1000;
 
-const texts = [''];
+const texts = [
+        "A hobbyist who loves solving real-life problems with aesthetically pleasing and",
+        "logical solutions. Dabbling in all things computer science, art, math, and many",
+        " other things that sound fancy and crazy.",
+];
 
 setTimeout(() => {
         texts.forEach((x, i) => {
                 setTimeout(addLine, step * i, `${x}`);
         });
-}, 3000);
+}, 0);
 
+// Dabbling in all things  <span class= "tooltip" style="color: #e4e7ed;"><b>computer science</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span>, <span class= "tooltip" style="color: #e4e7ed;"><b>art</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span>, <span class= "tooltip" style="color: #e4e7ed;"><b>math</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span> and <span class= "tooltip" style="color: #e4e7ed;"><b>other things</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span> that sound fancy and crazy.

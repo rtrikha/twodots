@@ -188,7 +188,7 @@ ul {
 
 .hero-wrapper {
         position: relataive;
-        width: 40vw;
+        /* width: 40vw; */
 }
 
 .hero-wrapper .subheading {
@@ -197,7 +197,6 @@ ul {
         animation-name: show-objects;
         animation-duration: 0.6s;
         animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
-        animation-delay: 3s;
         animation-fill-mode: forwards;
 }
 
@@ -391,7 +390,7 @@ ul {
         animation-name: show-objects;
         animation-duration: 0.3s;
         animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
-        animation-delay: 4s;
+        animation-delay: 6s;
         animation-fill-mode: forwards;
 }
 
@@ -408,18 +407,42 @@ ul {
 }
 
 .tooltip span {
-    display:none;
-    color:white;
-    position: relative;
-    background-color: #0D0F10;
-    padding: 16px;
-    border-radius: 4px;
-    font-size: 11px;
-    z-index: 999;
+        display: none;
+        color: white;
+        position: relative;
+        background-color: #0d0f10;
+        padding: 16px;
+        border-radius: 4px;
+        font-size: 11px;
+        z-index: 999;
 }
 
 .tooltip:hover span {
-    display:block;
-    position:fixed;
-    overflow:hidden;
+        display: block;
+        position: fixed;
+        overflow: hidden;
+        z-index: 1000;
+}
+
+/* Adding blackBox */
+.light {
+        /*color: #888;*/
+        opacity: 1;
+        color: white;
+}
+
+.table {
+        display: table;
+}
+
+.row {
+        display: table-row;
+}
+
+.cell {
+        display: table-cell;
+}
+
+.dud{
+        color: sandybrown;
 }
