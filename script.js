@@ -8,7 +8,6 @@ function classToggle() {
         var elem = document.getElementById("show-more");
         if (elem.innerHTML == "Show more") {
                 elem.innerHTML = "Show less";
-
                 document.getElementById("hero-wrapper").style.opacity = "0.1";
                 document.getElementById("hero-wrapper").style.transition = "opacity 0.3s";
                 document.getElementById("item1").style.display = "block";
