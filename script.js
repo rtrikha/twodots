@@ -1,15 +1,13 @@
 //getting the date and build number
-document.getElementById("item1").style.display = "none";
-document.getElementById("item2").style.display = "none";
-document.getElementById("item3").style.display = "none";
-document.getElementById("projects").style.display = "none";
 
-function formatAMPM() {
-        var d = new Date(),
-                months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-        return "v2.1 | " + months[d.getMonth()] + " " + d.getDate() + " " + d.getFullYear();
-}
+classToggle();
+
+// function formatAMPM() {
+//         var d = new Date(),
+//                 months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+//                 days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+//         return "v2.1 | " + months[d.getMonth()] + " " + d.getDate() + " " + d.getFullYear();
+// }
 
 document.getElementById("date-time").innerHTML = formatAMPM();
 
@@ -37,12 +35,16 @@ function classToggle() {
         }
 }
 
+// var tooltipSpan1 = document.getElementById("tooltip-span-1");
+// var tooltipSpan2 = document.getElementById("tooltip-span-2");
 
-var tooltipSpan = document.getElementById('tooltip-span');
+var tooltips = document.querySelectorAll('.tooltip span');
 
 window.onmousemove = function (e) {
-    var x = e.clientX,
-        y = e.clientY;
-    tooltipSpan.style.top = (y + 20) + 'px';
-    tooltipSpan.style.left = (x + 20) + 'px';
+    var x = (e.clientX + 20) + 'px',
+        y = (e.clientY + 20) + 'px';
+    for (var i = 0; i < tooltips.length; i++) {
+        tooltips[i].style.top = y;
+        tooltips[i].style.left = x;
+    }
 };
