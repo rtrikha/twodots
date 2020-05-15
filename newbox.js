@@ -1,83 +1,146 @@
-var scramble;
+"use strict";
 
-var scramble = "█+÷~.–<>/\\{}".split("");
-var cursors = "___█".split("");
-var cursor = "+";
-
-function type(el, content, duration, delay) {
-        var proxy = { progress: 0 };
-        var length = content.length;
-        var output = [];
-
-        Tween.to(proxy, duration || 1.0, { progress: 1 })
-                .wait(delay || 0)
-                .ease(Tween.Quad.inOut)
-                .step(function (tween) {
-                        // 1. fixed
-                        // 2. scrambled
-                        // 3. cursor
-                        // [a][b][#][#][-][-][ ][ ]
-
-                        var n1 = Math.pow(proxy.progress, 3.0) * length;
-                        var n2 = Math.pow(proxy.progress, 0.25) * length;
-                        var n3 = Math.pow(proxy.progress, 0.1) * length;
-
-                        for (var i = 0; i <= n3; i++) {
-                                if (i > n2) {
-                                        // 3. cursor
-                                        output[i] = cursors[Math.floor(Math.random() * cursors.length)];
-                                } else if (i > n1 /*|| Math.random() > tween.progress*/) {
-                                        // 2. scrambled
-                                        if (output[i] === "" || Math.random() < 0.1) {
-                                                output[i] = scramble[Math.floor(Math.random() * scramble.length)];
-                                        }
-                                } else {
-                                        // 1. fixed
-                                        output[i] = content.substr(i, 1);
-                                }
-                        }
-                        output[~~n3] = cursor;
-
-                        el.innerHTML = output.join("");
-                })
-                .done(function () {
-                        el.innerHTML = content;
-
-
-                });
+function _instanceof(left, right) {
+  if (
+    right != null &&
+    typeof Symbol !== "undefined" &&
+    right[Symbol.hasInstance]
+  ) {
+    return !!right[Symbol.hasInstance](left);
+  } else {
+    return left instanceof right;
+  }
 }
 
-var block = document.querySelector("#blackbox");
-
-function addLine(a, b, c) {
-        var duration = 1;
-        var step = 0;
-
-        var row, cell;
-        row = document.createElement("div");
-        row.className = "row";
-
-        cell = document.createElement("div");
-        cell.className = "cell light";
-        row.appendChild(cell);
-        type(cell, a, duration, step * 0);
-
-        block.appendChild(row);
+function _classCallCheck(instance, Constructor) {
+  if (!_instanceof(instance, Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
 }
 
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
 
-var step = 1000;
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
 
-const texts = [
-        "A hobbyist who loves solving real-life problems with aesthetically pleasing and",
-        "logical solutions. Dabbling in all things computer science, art, math, and many",
-        " other things that sound fancy and crazy.",
-];
+// ——————————————————————————————————————————————————
+// TextScramble
+// ——————————————————————————————————————————————————
+var TextScramble = /*#__PURE__*/ (function() {
+  function TextScramble(el) {
+    _classCallCheck(this, TextScramble);
 
-setTimeout(() => {
-        texts.forEach((x, i) => {
-                setTimeout(addLine, step * i, `${x}`);
+    this.el = el;
+    this.chars = "!<>-_\\/[]{}—=+*^?#________";
+    this.update = this.update.bind(this);
+  }
+
+  _createClass(TextScramble, [
+    {
+      key: "setText",
+      value: function setText(newText) {
+        var _this = this;
+
+        var oldText = this.el.innerText;
+        var length = Math.max(oldText.length, newText.length);
+        var promise = new Promise(function(resolve) {
+          return (_this.resolve = resolve);
         });
-}, 0);
+        this.queue = [];
 
-// Dabbling in all things  <span class= "tooltip" style="color: #e4e7ed;"><b>computer science</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span>, <span class= "tooltip" style="color: #e4e7ed;"><b>art</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span>, <span class= "tooltip" style="color: #e4e7ed;"><b>math</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span> and <span class= "tooltip" style="color: #e4e7ed;"><b>other things</b><span id="tooltip-span">Quantum Computing</br>First Order Logics</br>Neural Networks</br>Cryptocurrency</span></span> that sound fancy and crazy.
+        for (var i = 0; i < length; i++) {
+          var from = oldText[i] || "";
+          var to = newText[i] || "";
+          var start = Math.floor(Math.random() * 60);
+          var end = start + Math.floor(Math.random() * 60);
+          this.queue.push({
+            from: from,
+            to: to,
+            start: start,
+            end: end
+          });
+        }
+
+        cancelAnimationFrame(this.frameRequest);
+        this.frame = 0;
+        this.update();
+        return promise;
+      }
+    },
+    {
+      key: "update",
+      value: function update() {
+        var output = "";
+        var complete = 0;
+
+        for (var i = 0, n = this.queue.length; i < n; i++) {
+          var _this$queue$i = this.queue[i],
+            from = _this$queue$i.from,
+            to = _this$queue$i.to,
+            start = _this$queue$i.start,
+            end = _this$queue$i.end,
+            char = _this$queue$i.char;
+
+          if (this.frame >= end) {
+            complete++;
+            output += to;
+          } else if (this.frame >= start) {
+            if (!char || Math.random() < 0.28) {
+              char = this.randomChar();
+              this.queue[i].char = char;
+            }
+
+            output += '<span class="dud">'.concat(char, "</span>");
+          } else {
+            output += from;
+          }
+        }
+
+        this.el.innerHTML = output;
+
+        if (complete === this.queue.length) {
+          this.resolve();
+        } else {
+          this.frameRequest = requestAnimationFrame(this.update);
+          this.frame++;
+        }
+      }
+    },
+    {
+      key: "randomChar",
+      value: function randomChar() {
+        return this.chars[Math.floor(Math.random() * this.chars.length)];
+      }
+    }
+  ]);
+
+  return TextScramble;
+})(); // ——————————————————————————————————————————————————
+// Example
+// ——————————————————————————————————————————————————
+
+var phrases = ["Hi, I'm Raunak Trikha"];
+
+var el = document.querySelector(".heading");
+var fx = new TextScramble(el);
+var counter = 0;
+
+var next = function next() {
+  fx.setText(phrases[counter]).then(function() {
+    setTimeout(()=>{}, 8000);
+  });
+  counter = (counter + 1) % phrases.length;
+};
+
+next();

@@ -58,6 +58,8 @@ body {
         left: 0;
         top: 0;
         margin: 0;
+        height: auto;
+        scroll-behavior: smooth;
 }
 /* 
 
@@ -86,10 +88,10 @@ All the wrappers
 .content-wrapper {
         position: absolute;
         align-items: center;
-        padding-top: 12vh;
+        padding-top: 0vh;
         display: block;
         height: auto;
-        width: 84vw;
+        width: 88vw;
         left: 0;
         padding-left: 6vw;
         padding-right: 6vw;
@@ -99,7 +101,7 @@ All the wrappers
         position: relataive;
         min-width: max-content;
         position: relative;
-        display: flex;
+        display: block;
 }
 
 /*
@@ -126,7 +128,7 @@ All the sub wrappers and content
 }
 
 .hero-wrapper .subheading {
-        padding-top: 4vh;
+        padding-top: 5vh;
         opacity: 0;
         animation-name: show-objects;
         animation-duration: 0.3s;
@@ -135,18 +137,18 @@ All the sub wrappers and content
         position: absolute;
         color: #C6CBD6;
         animation-delay: 1.8s;
-        width: 60%;
-        line-height: 23px;
+        font-size: 12px;
+        line-height: 21px;
+        width: 100%;
         /* width: 40vw; */
 }
 
 .footer-wrapper {
-        display: flex;
         position: fixed;
         z-index: 1000;
         font-size: 12px;
         color: #636772;
-        bottom: 1vh;
+        bottom: 0vh;
         width: auto;
         right: 0;
         left: 0;
@@ -159,6 +161,7 @@ All the sub wrappers and content
         animation-fill-mode: forwards;
         transform: translatey(4vh);
         align-items: center;
+        background-color: #121516;
 }
 
 @keyframes move-footer {
@@ -188,7 +191,7 @@ All the sub wrappers and content
 
 .footer-wrapper .right-content {
         display: flex;
-        font-size: 12px;
+        font-size: 10px;
         text-transform: uppercase;
         font-family: Carbon-Bold;
 }
@@ -202,6 +205,7 @@ All the sub wrappers and content
         margin-right: auto;
         cursor: pointer;
         padding-right: 10px;
+        opacity: 0;
 }
 
 #credits:hover {
@@ -209,11 +213,11 @@ All the sub wrappers and content
 }
 
 .footer-wrapper .gitHub {
-        margin-right: 40px;
+        margin-right: 24px;
         opacity: 0.5;
 }
 .footer-wrapper .dribbble {
-        margin-right: 40px;
+        margin-right: 24px;
         opacity: 0.5;
 }
 .footer-wrapper .medium {
@@ -235,8 +239,7 @@ All the sub wrappers and content
 @keyframes show-objects {
         from {
                 opacity: 0;
-                transform: translatey(1vh);
-
+                transform: translatey(2vh);
         }
         to {
                 opacity: 1;
@@ -245,16 +248,17 @@ All the sub wrappers and content
 }
 
 #projects {
-        display: flex;
-        padding-top: 20vh;
+        display: block;
+        padding-top: 22vh;
         left: auto;
-        width: 80vw;
+        width: 88vw;
         animation-name: show-objects;
         animation-duration: 0.3s;
         animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
         animation-fill-mode: forwards;
         animation-delay: 2.2s;
         opacity: 0;
+        padding-bottom: 6vh;
 }
 
 #arrow {
@@ -263,6 +267,7 @@ All the sub wrappers and content
         left: 0;
         bottom: 0;
         margin-top: 16px;
+        display: none;
 }
 
 .project-list:hover {
@@ -278,8 +283,9 @@ All the sub wrappers and content
 }
 
 #projects .heading {
-        font-size: 14px;
+        font-size: 12px;
         color: white;
+        width: max-content;
 }
 
 .flex-wrapper {
@@ -289,18 +295,18 @@ All the sub wrappers and content
 
 #projects .subheading {
         color: #a6abbb;
-        font-size: 12px;
+        font-size: 11px;
         letter-spacing: -0.2px;
-        line-height: 20px;
+        line-height: 19px;
         padding-top: 4px;
 }
 
 #projects .flex-wrapper > div {
         margin-right: 6vw;
-        flex: 1 0 21%;
-        max-width: 33%;
+        flex: 1 0 100%;
+        max-width: 100%;
         flex-grow: 0;
-        margin-bottom: 4vh;
+        margin-bottom: 3vh;
 }
 
 @keyframes move-arrow {
@@ -312,41 +318,6 @@ All the sub wrappers and content
                 opacity: 1;
                 transform: translateX(0px);
         }
-}
-
-@keyframes show-context {
-        from {
-
-        }
-        to {
-                opacity: 0.3;
-        }
-}
-
-
-
-.info{
-        animation-name: show-context;
-        animation-duration: 0.3s;
-        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
-        animation-fill-mode: forwards;
-        animation-delay: 1.8s;
-        opacity: 0;
-        font-size: 11px;
-        margin-top: 6px;
-        margin-right: 2vw;
-}
-
-.labs{
-        animation-name: show-context;
-        animation-duration: 0.3s;
-        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
-        animation-fill-mode: forwards;
-        animation-delay: 2.2s;
-        opacity: 0;
-        font-size: 11px;
-        margin-top: 4px;
-        margin-right: 2vw;
 }
 
 
@@ -368,4 +339,43 @@ All the sub wrappers and content
         display: block;
         position: fixed;
         overflow: hidden;
+}
+
+#context{
+    font-size: 10px;
+}
+
+.info {
+        animation-name: show-context;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+        animation-fill-mode: forwards;
+        animation-delay: 1.8s;
+        opacity: 0;
+        font-size: 10px;
+        margin-right: 2vw;
+        margin-bottom: 8px;
+}
+
+.labs {
+        animation-name: show-context;
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+        animation-fill-mode: forwards;
+        animation-delay: 2.2s;
+        opacity: 0;
+        font-size: 10px;
+        margin-right: 2vw;
+        margin-bottom: 8px;
+
+}
+
+@keyframes show-context {
+    from {
+        opacity: 0;
+
+    }
+    to {
+            opacity: 0.3;
+    }
 }

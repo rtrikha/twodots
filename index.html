@@ -5,177 +5,114 @@
                         <meta charset="utf-8" />
                         <title>Portfolio</title>
                         <link rel="stylesheet" href="style.css" />
-                        <script src = "https://rawgit.com/moon/tween/master/tween.js"></script>
-
+                        <script src="https://rawgit.com/moon/tween/master/tween.js"></script>
+                        <link rel="stylesheet" media="screen and (max-device-width: 900px)" href="900.css" />
+                        <link rel="stylesheet" media="screen and (max-device-width: 500px)" href="500.css" />
+                        <meta name="viewport" content="width=devide-width, initial-scale=1.0" />
                 </head>
 
                 <body>
                         <div class="main-wrapper" id="testid">
-                                <ul class="header-wrapper" role="navigation">
-                                        <li class="home">HOME</li>
-                                </ul>
+                                <div class="nav-wrapper" role="navigation">
+                                </div>
 
                                 <div class="content-wrapper">
                                         <div class="hero-wrapper" id="hero-wrapper">
-                                                <div class="heading" id="typed-strings">
-                                                        <h1>
-                                                                Hi, I'm Raunak Trikha
-                                                        </h1>
+                                                <div class ="info "id="context">
+                                                        INFO.
                                                 </div>
-
-                                                <span class="heading" id="typed"></span>
-                                                <div class="subheading" id="blackbox"></div>
+                                                <div class="flex-wrapper">
+                                                        <div class="heading" id="typed-strings">
+                                                                <!-- <h1>
+                                                                        Hi, I'm Raunak Trikha
+                                                                </h1> -->
+                                                        </div>
+                                                        <div class="subheading">
+                                                                A hobbyist who loves solving real-life problems with
+                                                                aesthetically pleasing and logical solutions. Dabbling
+                                                                in all things computer science, art, math, and many
+                                                                other things that sound fancy and crazy.
+                                                        </div>
+                                                </div>
                                         </div>
 
-                                        <div class="show-more-wrapper">
-                                                <div
-                                                        onclick="classToggle()"
-                                                        class="show-more"
-                                                        type="button"
-                                                        id="show-more"
-                                                >
-                                                        Show more
-                                                </div>
-                                                <a class="arrow">
-                                                        <img src="Assets/arrow.svg" alt="" />
-                                                </a>
-                                        </div>
-
-                                        <section class="body-wrapper">
-                                                <div class="item" id="item1">
-                                                        <div class="heading">
-                                                                <h2>
-                                                                        What?
-                                                                </h2>
-                                                        </div>
-                                                        <div class="subheading">
-                                                                <h3>
-                                                                        I geek out on
-                                                                        <span style="color: #e4e7ed;"
-                                                                                ><b>Design Systems</b></span
-                                                                        >,
-                                                                        <span style="color: #e4e7ed;"
-                                                                                ><b>Human Psychology</b></span
-                                                                        >, and
-                                                                        <span style="color: #e4e7ed;"
-                                                                                ><b>Smoothies</b></span
-                                                                        >. I make stuff right and make right stuff. I
-                                                                        deeply care about music, art and my dog.
-                                                                </h3>
-                                                        </div>
+                                        <div id="projects">
+                                                <div class="labs" id="context">
+                                                        LABS.
                                                 </div>
 
-                                                <div class="item" id="item2">
-                                                        <div class="heading">
-                                                                <h2>
-                                                                        Why?
-                                                                </h2>
-                                                        </div>
-                                                        <div class="subheading">
-                                                                <h3>
-                                                                        To justify my
-                                                                        <span style="color: #e4e7ed;"
-                                                                                ><b>degree</b></span
-                                                                        >
-                                                                        & ostentatious interest in design. Also I think,
-                                                                        Data shapes experiences... analayse through data
-                                                                        and solve through design.
-                                                                </h3>
-                                                        </div>
-                                                </div>
-
-                                                <div class="item1" id="item3">
-                                                        <div class="heading">
-                                                                <h2>
-                                                                        How?
-                                                                </h2>
-                                                        </div>
-                                                        <div class="subheading">
-                                                                <h3>
-                                                                        I put good ideas on
-                                                                        <span class="link" style="color: #e4e7ed;"
-                                                                                ><b
-                                                                                        ><a
-                                                                                                href="https://medium.com/@rtrikha"
-                                                                                                target="_blank"
-                                                                                                >Medium</a
-                                                                                        ></b
-                                                                                ></span
-                                                                        >
-                                                                        and bad ideas on
-                                                                        <span class="link" style="color: #e4e7ed;"
-                                                                                ><b
-                                                                                        ><a
-                                                                                                href="https://twitter.com/rstrikha"
-                                                                                                target="_blank"
-                                                                                                >Twitter</a
-                                                                                        ></b
-                                                                                ></span
-                                                                        >. Asking random shit on reddit and adding good
-                                                                        music to my
-                                                                        <span class="link" style="color: #e4e7ed;"
-                                                                                ><b
-                                                                                        ><a
-                                                                                                href="https://music.apple.com/in/playlist/the-last-cigarette/pl.u-6mo4aW4HBPaW6jl"
-                                                                                                target="_blank"
-                                                                                                >playlist</a
-                                                                                        ></b
-                                                                                ></span
-                                                                        >.
-                                                                </h3>
-                                                        </div>
-                                                </div>
-                                        </section>
-
-                                        <div class="projects" id="projects">
-                                                <div class="heading">SELECTED PROJECTS</div>
-                                                <ul class="projects-list" role="navigation">
-                                                        <div class="move-hover-projects">
-                                                                <div class="heading">Garden Offshoot</div>
+                                                <div class="flex-wrapper">
+                                                        <div class="project-list">
+                                                                <div href="" class="heading">
+                                                                        Garden
+                                                                </div>
                                                                 <div class="subheading">
                                                                         ever evolving design system to solve the
                                                                         problems of component based design
                                                                 </div>
-                                                        </div>
-                                                        <div class="move-hover-projects">
-                                                                <div class="heading">Properly Operations</div>
-                                                                <div class="subheading">
-                                                                        solution for hospitality verticals to solve
-                                                                        their task allocation, escalation handling, &
-                                                                        hierarchical structural problems
+                                                                <div id="arrow">
+                                                                        <img src="Assets/arrow.svg" alt="" />
                                                                 </div>
                                                         </div>
-                                                        <div class="move-hover-projects">
-                                                                <div class="heading">Rubber Numbers</div>
+
+                                                        <div class="project-list">
+                                                                <div class="heading">
+                                                                        Properly Operations
+                                                                </div>
+                                                                <div class="subheading">
+                                                                        solution for the hospitality verticals to solve
+                                                                        their task allocation
+                                                                </div>
+                                                                <div id="arrow">
+                                                                        <img src="Assets/arrow.svg" alt="" />
+                                                                </div>
+                                                        </div>
+
+                                                        <div class="project-list">
+                                                                <div class="heading">
+                                                                        Rubber Numbers
+                                                                </div>
                                                                 <div class="subheading">
                                                                         fintech solution for holistic view of
-                                                                        organisation
+                                                                        organisation and take data driver decisions
+                                                                </div>
+                                                                <div id="arrow">
+                                                                        <img src="Assets/arrow.svg" alt="" />
                                                                 </div>
                                                         </div>
-                                                        <div class="move-hover-projects">
-                                                                <div class="heading">Music:ED</div>
+
+                                                        <div class="project-list">
+                                                                <div class="heading">
+                                                                        Music:ED
+                                                                </div>
                                                                 <div class="subheading">
-                                                                        overhauling the entire experience of a website
+                                                                        Overhauling the entire experience of an existing
+                                                                        website
+                                                                </div>
+                                                                <div id="arrow">
+                                                                        <img src="Assets/arrow.svg" alt="" />
                                                                 </div>
                                                         </div>
-                                                        <div class="move-hover-projects">
-                                                                <div class="heading">Blade Runner</div>
+
+                                                        <div class="project-list">
+                                                                <div class="heading">
+                                                                        Blade Runner
+                                                                </div>
                                                                 <div class="subheading">
-                                                                        Arcade-Platform game made using Unity
+                                                                        Arcade-Platform game made using Unity, C# and
+                                                                </div>
+                                                                <div id="arrow">
+                                                                        <img src="Assets/arrow.svg" alt="" />
                                                                 </div>
                                                         </div>
-                                                        <div class="move-hover-projects">
-                                                                <div class="heading">Asilverse</div>
-                                                                <div class="subheading">
-                                                                        branding refinement and web solution
-                                                                </div>
-                                                        </div>
-                                                </ul>
+                                                </div>
                                         </div>
                                 </div>
 
                                 <div class="footer-wrapper" role="navigation">
-                                        <div id="date-time"></div>
+                                        <div id="credits">
+                                                <span class="tooltip">•<span id="tooltip-span">Last updated on : <b>20th May 2020</b></br>Made with love by <b>Raunak Trikha ♥️</b></span></span>
+                                        </div>
                                         <div class="right-content">
                                                 <div class="gitHub">
                                                         <a href="https://github.com/rtrikha" target="_blank">GitHub</a>
@@ -196,10 +133,10 @@
                 <script src="typed.js"></script>
                 <script src="newbox.js"></script>
 
-                <script>
+                <!-- <script>
                         var typed = new Typed("#typed", {
                                 stringsElement: "#typed-strings",
                         });
-                </script>
+                </script> -->
         </html>
 </html>
