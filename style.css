@@ -59,6 +59,23 @@ body {
         top: 0;
         margin: 0;
 }
+
+.page{
+        display: none;
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+}
+
+.active{
+        display: block;
+}
+
+#home{
+}
+
+#work{
+}
 /* 
 
 All the wrappers 
