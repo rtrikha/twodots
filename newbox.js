@@ -62,8 +62,8 @@ var TextScramble = /*#__PURE__*/ (function() {
         for (var i = 0; i < length; i++) {
           var from = oldText[i] || "";
           var to = newText[i] || "";
-          var start = Math.floor(Math.random() * 60);
-          var end = start + Math.floor(Math.random() * 60);
+          var start = Math.floor(Math.random() * 40);
+          var end = start + Math.floor(Math.random() * 40);
           this.queue.push({
             from: from,
             to: to,
