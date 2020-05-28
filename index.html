@@ -10,6 +10,8 @@
 			<link rel="stylesheet" media="screen and (max-device-width: 500px)" href="mobile.css" />
 			<meta name="viewport" content="width=devide-width, initial-scale=1.0" />
 			<link rel="shortcut icon" type="image/png" href="Assets/twodots.png" />
+			<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+			<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
 		</head>
 
 		<body>
@@ -167,6 +169,22 @@
 					</div>
 				</div>
 			</div>
+			<script>
+				// Your web app's Firebase configuration
+				var firebaseConfig = {
+					apiKey: 'AIzaSyDIKLPF3926RNw8R-9yD_zRz_suu3jHVQw',
+					authDomain: 'twodots-c4f5a.firebaseapp.com',
+					databaseURL: 'https://twodots-c4f5a.firebaseio.com',
+					projectId: 'twodots-c4f5a',
+					storageBucket: 'twodots-c4f5a.appspot.com',
+					messagingSenderId: '835145283151',
+					appId: '1:835145283151:web:749609ec8165b29dfb1c3a',
+					measurementId: 'G-VMR74RHZD3',
+				};
+				// Initialize Firebase
+				firebase.initializeApp(firebaseConfig);
+				firebase.analytics();
+			</script>
 		</body>
 		<script src="script.js"></script>
 		<script src="typed.js"></script>
