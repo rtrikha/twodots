@@ -174,12 +174,15 @@ body {
 }
 
 #arrow {
-	opacity: 0;
+	opacity: 1;
 	background-repeat: no-repeat;
 	left: 0;
 	bottom: 0;
-        margin-top: 16px;
-        display: none;
+    margin-top: 16px;
+}
+
+.project-list a > #arrow{
+	display: block;
 }
 
 .project-list:hover {
