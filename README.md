@@ -1,4 +1,4 @@
-![twodots](https://raw.githubusercontent.com/rtrikha/twodots/54c8efb7309745bdf3269b04f2b194f2957233be/Assets/twodotswhite.svg)
+![twodots](https://raw.githubusercontent.com/rtrikha/twodots/a4bae497edc70c5cdf06ca60feea5385932fff69/Assets/twodotswhite.svg)
 
 <br>
 
