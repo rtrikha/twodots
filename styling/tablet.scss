@@ -1,15 +1,15 @@
 @font-face {
-	src: url(fonts/Carbon.ttf);
+	src: url(/resources/fonts/Carbon.ttf);
 	font-family: Carbon-Bold;
 	font-weight: 700;
 }
 @font-face {
-	src: url(fonts/SpaceMono-Bold.ttf);
+	src: url(/resources/fonts/SpaceMono-Bold.ttf);
 	font-family: Space-Mono;
 	font-weight: 700;
 }
 @font-face {
-	src: url(fonts/SpaceMono-Regular.ttf);
+	src: url(/resources/fonts/SpaceMono-Regular.ttf);
 	font-family: Space-Mono;
 	font-weight: 400;
 }
@@ -59,6 +59,7 @@ body {
 	top: 0;
 	margin: 0;
 	user-select: none;
+
 }
 
 /* 
@@ -90,11 +91,14 @@ body {
 
 */
 
+#twodots-logo {
+	margin-left: 0;
+}
 
 .nav-wrapper {
 	margin-block-end: 0rem;
 	margin-block-start: 0rem;
-    width: 100%;
+	width: 100%;
 	padding-top: 8vh;
 	margin-left: 0;
 }
@@ -131,7 +135,7 @@ body {
 	position: relative;
 	color: #b6b6b6;
 	animation-delay: 1s;
-	width: 100%;
+	width: 70%;
 	line-height: 23px;
 }
 
@@ -144,8 +148,8 @@ body {
 	opacity: 0.3;
 }
 
-.flex-pair{
-        padding-top: 2vh;
+.flex-pair {
+	padding-top: 2vh;
 }
 
 /*
@@ -155,19 +159,19 @@ body {
 */
 
 .content-wrapper {
-        position: relative;
-        align-items: center;
-        padding-top: 6vh;
-        display: block;
-        height: auto;
-        width: 100%;
-        left: 0;
+	position: relative;
+	align-items: center;
+	padding-top: 6vh;
+	display: block;
+	height: auto;
+	width: 100%;
+	left: 0;
 }
 
 #projects {
-        display: block;
-        padding-top: 6vh;
-        padding-bottom: 8vh;
+	display: block;
+	padding-top: 6vh;
+	padding-bottom: 8vh;
 	left: auto;
 	width: 84vw;
 	opacity: 1;
@@ -178,7 +182,8 @@ body {
 	background-repeat: no-repeat;
 	left: 0;
 	bottom: 0;
-    margin-top: 16px;
+	margin-top: 16px;
+	display: none;
 }
 
 .project-list a > #arrow{
@@ -203,8 +208,8 @@ body {
 
 .flex-wrapper {
 	display: flex;
-        flex-wrap: wrap;
-        padding-top: 2vh;
+	flex-wrap: wrap;
+	padding-top: 2vh;
 }
 
 #projects .subheading {
@@ -225,10 +230,10 @@ body {
 }
 
 #projects .flex-wrapper > div {
-	flex: 1 0 100%;
-	max-width: 100%;
+	flex: 1 0 50%;
+	max-width: 40%;
 	flex-grow: 0;
-	margin-bottom: 4vh;
+	margin-bottom: 6vh;
 }
 
 .info {
@@ -262,10 +267,10 @@ body {
 	z-index: 1000;
 	font-size: 12px;
 	color: #636772;
-        width: auto;
-        height: 6vh;
-        right: 0;
-        bottom: 0;
+	width: auto;
+	height: 6vh;
+	right: 0;
+	bottom: 0;
 	left: 0;
 	padding-right: 8vw;
 	padding-left: 8vw;
@@ -275,8 +280,8 @@ body {
 	animation-delay: 2s;
 	animation-fill-mode: forwards;
 	transform: translatey(5vh);
-        align-items: center;
-        background-color: #111111;
+	align-items: center;
+	background-color: #111111;
 }
 
 .footer-wrapper .right-content {

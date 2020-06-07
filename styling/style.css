@@ -1,0 +1,511 @@
+@font-face {
+  src: url(/resources/fonts/Carbon.ttf);
+  font-family: Carbon-Bold;
+  font-weight: 700;
+}
+
+@font-face {
+  src: url(/resources/fonts/SpaceMono-Bold.ttf);
+  font-family: Space-Mono;
+  font-weight: 700;
+}
+
+@font-face {
+  src: url(/resources/fonts/SpaceMono-Regular.ttf);
+  font-family: Space-Mono;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 20px;
+  color: white;
+  position: relative;
+  font-family: Carbon-Bold;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-margin-after: 0rem;
+          margin-block-end: 0rem;
+  -webkit-margin-before: 0rem;
+          margin-block-start: 0rem;
+}
+
+h2 {
+  font-size: 16px;
+  color: white;
+  opacity: 0.3;
+  position: relative;
+  font-family: Carbon-Bold;
+  text-transform: uppercase;
+  -webkit-margin-after: 0rem;
+          margin-block-end: 0rem;
+  -webkit-margin-before: 0rem;
+          margin-block-start: 0rem;
+}
+
+h3 {
+  font-size: 12px;
+  font-family: Space-Mono;
+  font-weight: 400;
+  color: #d6dae2;
+  width: inherit;
+  letter-spacing: -0.2px;
+  line-height: 21px;
+  -webkit-margin-after: 0rem;
+          margin-block-end: 0rem;
+  -webkit-margin-before: 0rem;
+          margin-block-start: 0rem;
+}
+
+body {
+  background-color: #111111;
+  -webkit-font-smoothing: antialiased;
+  font-size: 13px;
+  font-family: Space-Mono;
+  font-weight: 400;
+  color: #a6abbb;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  letter-spacing: 0.28px;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+/* 
+
+* All the wrappers 
+
+*/
+.main-wrapper {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding-right: 6vw;
+  padding-left: 6vw;
+}
+
+.body-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  text-align: left;
+  position: relative;
+  margin-top: 6vh;
+  z-index: 99999;
+}
+
+/*
+
+* Header - Navigation
+
+*/
+#twodots-logo {
+  margin-left: 4.4vw;
+}
+
+.nav-wrapper {
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10vh;
+  margin-left: 4.4vw;
+  -webkit-margin-after: 0rem;
+          margin-block-end: 0rem;
+  -webkit-margin-before: 0rem;
+          margin-block-start: 0rem;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+/*
+
+* Content - hero - header
+
+*/
+.hero-wrapper #typed {
+  font-size: 18px;
+  color: white;
+  position: relative;
+  font-family: Carbon-Bold;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-margin-after: 0rem;
+          margin-block-end: 0rem;
+  -webkit-margin-before: 0rem;
+          margin-block-start: 0rem;
+  font-weight: 800;
+}
+
+.hero-wrapper .heading {
+  color: white;
+  font-size: 18px;
+}
+
+.hero-wrapper .subheading {
+  padding-top: 2vh;
+  opacity: 0;
+  -webkit-animation-name: show-objects;
+          animation-name: show-objects;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+          animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  position: absolute;
+  color: #b6b6b6;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  width: 50%;
+  line-height: 23px;
+  position: relative;
+}
+
+.hero-wrapper {
+  position: relataive;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dud {
+  color: white;
+  opacity: 0.3;
+}
+
+/*
+
+* Labs
+
+*/
+.content-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10vh;
+  display: block;
+  height: auto;
+  width: 88vw;
+  left: 0;
+}
+
+#projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10vh;
+  left: auto;
+  width: 80vw;
+  opacity: 1;
+}
+
+#arrow {
+  opacity: 0;
+  background-repeat: no-repeat;
+  left: 0;
+  bottom: 0;
+  margin-top: 16px;
+}
+
+.project-list a:hover {
+  cursor: pointer;
+}
+
+.project-list a:hover > #arrow {
+  -webkit-animation-name: move-arrow;
+          animation-name: move-arrow;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+          animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.project-list a:visited {
+  text-decoration: none;
+}
+
+.project-list a:link {
+  text-decoration: none;
+}
+
+#projects .heading {
+  font-size: 14px;
+  color: white;
+}
+
+.flex-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#projects .subheading {
+  color: #828282;
+  font-size: 12px;
+  letter-spacing: -0.2px;
+  line-height: 20px;
+  padding-top: 4px;
+}
+
+#labs-list {
+  -webkit-animation-name: show-objects;
+          animation-name: show-objects;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+          animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+  opacity: 0;
+}
+
+#projects .flex-wrapper > div {
+  margin-right: 6vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 21%;
+          flex: 1 0 21%;
+  max-width: 33%;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  margin-bottom: 4vh;
+}
+
+.info {
+  -webkit-animation-name: show-context;
+          animation-name: show-context;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+          animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  opacity: 0;
+  font-size: 11px;
+  margin-top: 6px;
+  margin-right: 2vw;
+}
+
+.labs {
+  -webkit-animation-name: show-context;
+          animation-name: show-context;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+          animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  opacity: 0;
+  font-size: 11px;
+  margin-top: 4px;
+  margin-right: 2vw;
+}
+
+/*
+
+* Footer
+
+*/
+.footer-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  font-size: 12px;
+  color: #636772;
+  bottom: 3vh;
+  width: auto;
+  right: 0;
+  left: 0;
+  padding-right: 8vw;
+  padding-left: 8vw;
+  -webkit-animation-name: move-footer;
+          animation-name: move-footer;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
+  -webkit-animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+          animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-transform: translatey(5vh);
+          transform: translatey(5vh);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-wrapper .right-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: Carbon-Bold;
+}
+
+#credits {
+  opacity: 0.5;
+  cursor: auto;
+  text-transform: uppercase;
+  left: 0;
+  font-size: 22px;
+  margin-right: auto;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+#credits:hover {
+  opacity: 1;
+}
+
+.footer-wrapper .gitHub {
+  margin-right: 40px;
+  opacity: 0.5;
+}
+
+.footer-wrapper .dribbble {
+  margin-right: 40px;
+  opacity: 0.5;
+}
+
+.footer-wrapper .medium {
+  opacity: 0.5;
+}
+
+.footer-wrapper :hover {
+  opacity: 1;
+}
+
+.footer-wrapper :link {
+  text-decoration: none;
+  color: #636772;
+}
+
+.footer-wrapper :visited {
+  text-decoration: none;
+  color: #636772;
+}
+
+/*
+
+* All the animations
+
+*/
+@-webkit-keyframes move-arrow {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes move-arrow {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(-4px);
+            transform: translateX(-4px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes show-context {
+  from {
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes show-context {
+  from {
+  }
+  to {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes show-objects {
+  from {
+    opacity: 0;
+    -webkit-transform: translatey(1vh);
+            transform: translatey(1vh);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translatey(0vh);
+            transform: translatey(0vh);
+  }
+}
+
+@keyframes show-objects {
+  from {
+    opacity: 0;
+    -webkit-transform: translatey(1vh);
+            transform: translatey(1vh);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translatey(0vh);
+            transform: translatey(0vh);
+  }
+}
+
+@-webkit-keyframes move-footer {
+  from {
+  }
+  to {
+    -webkit-transform: translatey(0vh);
+            transform: translatey(0vh);
+  }
+}
+
+@keyframes move-footer {
+  from {
+  }
+  to {
+    -webkit-transform: translatey(0vh);
+            transform: translatey(0vh);
+  }
+}
+
+.projects-wrapper a:hover {
+  opacity: 0.7;
+}
+/*# sourceMappingURL=style.css.map */
