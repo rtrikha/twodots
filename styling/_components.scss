@@ -1,0 +1,31 @@
+
+@mixin header-nav {
+	position: relative;
+	display: flex;
+	padding-top: 8vh;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-right: 0;
+
+	.nav-text {
+		@include nav-text;
+		letter-spacing: 0px;
+	}
+}
+
+@mixin footer-nav {
+	display: flex;
+	position: fixed;
+	bottom: 0vh;
+	margin-right: 0;
+	background: $a-b;
+	justify-content: flex-end;
+
+	.nav-text {
+		@include nav-text;
+		letter-spacing: 0px;
+	}
+}
