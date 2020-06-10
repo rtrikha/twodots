@@ -382,8 +382,11 @@ body {
   .footer-nav .nav-text {
     margin-left: 10vw;
   }
+  .content-wrapper {
+    padding-top: 8vh;
+  }
   .content-wrapper #projects {
-    padding-top: 6vh;
+    padding-top: 8vh;
   }
   #projects .flex-wrapper > div {
     -webkit-box-flex: 1;
