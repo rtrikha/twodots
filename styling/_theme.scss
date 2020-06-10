@@ -29,7 +29,7 @@ $l-s-misc: var(--l-s-misc);
 $l-h-misc: var(--l-h-misc);
 
 @mixin cta {
-	color: $b-i;
+	color: $t-f;
 	font-family: heading, monospace;
 	font-size: $f-t-cta;
 	letter-spacing: $l-s-cta;
@@ -40,7 +40,7 @@ $l-h-misc: var(--l-h-misc);
 	padding: 2vh;
 
 	&:hover {
-		color: $b-m;
+		color: $t-b;
 	}
 }
 

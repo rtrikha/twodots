@@ -1,6 +1,6 @@
 var breakPoint1, breakPoint2, breakPoint3, breakPoint4;
 
-const letterSpacingValue = -30;
+const letterSpacingValue = -31;
 const lineHeightValue = 0.56;
 
 const stock = {
