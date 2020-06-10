@@ -208,12 +208,12 @@ body {
   opacity: 0;
   -webkit-animation: move-footer;
           animation: move-footer;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s;
   -webkit-animation-delay: 1.8s;
           animation-delay: 1.8s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
 .footer-nav .nav-text {

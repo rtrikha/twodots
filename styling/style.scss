@@ -112,9 +112,9 @@ body {
 	width: 80%;
 	opacity: 0;
 	animation: move-footer;
+	animation-fill-mode: forwards;
 	animation-duration: 0.6s;
 	animation-delay: 1.8s;
-	animation-fill-mode: forwards;
 
 	.nav-text {
 		margin-left: 3vw;
