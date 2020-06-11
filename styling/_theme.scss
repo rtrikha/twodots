@@ -64,14 +64,13 @@ $l-h-misc: var(--l-h-misc);
 	color: $f-l;
 	font-family: heading;
 	font-size: $f-t-nt;
-	letter-spacing: $l-s-nt;
+	letter-spacing: 0px;
 	line-height: $l-h-nt;
 	padding-top: 3vh;
 	padding-bottom: 3vh;
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
-
 	&:hover {
 		color: $f-m;
 	}
