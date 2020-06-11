@@ -1,5 +1,4 @@
 @import 'theme';
-@import 'components';
 
 body {
 	background-color: $a-b;
@@ -9,7 +8,9 @@ body {
 }
 
 .header-nav {
-	@include header-nav;
+	.nav-text {
+		@include nav-text;
+	}
 }
 .main-wrapper {
 	position: relative;
@@ -22,7 +23,8 @@ body {
 	color: $f-l;
 }
 .content-wrapper {
-	padding-top: 10vh;
+	padding-top: 8vh;
+	padding-bottom: 8vh;
 
 	.hero-wrapper {
 		.heading {
@@ -108,8 +110,7 @@ body {
 
 */
 .footer-nav {
-	@include footer-nav;
-	width: 80%;
+	width: 80vw;
 	opacity: 0;
 	animation: move-footer;
 	animation-fill-mode: forwards !important;
@@ -117,6 +118,7 @@ body {
 	animation-delay: 1.8s;
 
 	.nav-text {
+		@include nav-text;
 		margin-left: 3vw;
 	}
 }
@@ -169,8 +171,8 @@ body {
 @media screen and (max-width: 720px) {
 	.footer-nav {
 		width: 88%;
-		
-		.nav-text{
+
+		.nav-text {
 			margin-left: 6vw;
 		}
 	}
@@ -203,8 +205,7 @@ body {
 
 @media screen and (max-width: 560px) {
 	.footer-nav {
-		
-		.nav-text{
+		.nav-text {
 			margin-left: 8vw;
 		}
 	}
@@ -226,7 +227,7 @@ body {
 
 @media screen and (max-width: 420px) {
 	.footer-nav {
-		.nav-text{
+		.nav-text {
 			margin-left: 10vw;
 		}
 	}
