@@ -126,9 +126,9 @@ function addNavItems(target, link) {
 	document.querySelector('.footer-nav').appendChild(anchorItems);
 }
 
-addNavItems('GitHub', 'https://github.com/rtrikha');
-addNavItems('Dribbble', 'https://dribbble.com/rtrikha');
-addNavItems('Medium', 'https://medium.com/@rtrikha');
+	addNavItems('GitHub', 'https://github.com/rtrikha');
+	addNavItems('Dribbble', 'https://dribbble.com/rtrikha');
+	addNavItems('Medium', 'https://medium.com/@rtrikha');
 
 idSelector('footer-nav').style.background = 'var(--a-b)';
 idSelector('footer-nav').style.display = 'flex';
