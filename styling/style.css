@@ -194,12 +194,6 @@ body {
 
 */
 .footer-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  bottom: 0vh;
-  margin-right: 0;
   background: var(--a-b);
   -webkit-box-pack: end;
       -ms-flex-pack: end;

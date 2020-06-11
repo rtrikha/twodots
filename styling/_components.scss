@@ -17,12 +17,6 @@
 }
 
 @mixin footer-nav {
-	display: flex;
-	position: fixed;
-	bottom: 0vh;
-	margin-right: 0;
-	background: $a-b;
-	justify-content: flex-end;
 
 	.nav-text {
 		@include nav-text;

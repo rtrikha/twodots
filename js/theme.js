@@ -1,6 +1,6 @@
 var breakPoint1, breakPoint2, breakPoint3, breakPoint4;
 
-const letterSpacingValue = -31;
+const letterSpacingValue = -30;
 const lineHeightValue = 0.56;
 
 const stock = {
@@ -14,6 +14,7 @@ const stock = {
 	toneForeground: '#6E6E73',
 	toneBackground: '#7A849D',
 };
+
 const gotham = {
 	appBackground: '#0A0F14',
 	foregroundHigh: '#98D1CE',
@@ -26,7 +27,16 @@ const gotham = {
 	backgroundInverted: '#8FAF9F',
 };
 
-function applyColourTheme(themeName) {
+// const Themes = {
+// 	stock:{
+
+// 	},
+// 	gotham: {
+
+// 	}
+// }
+
+window.applyColourTheme = function (themeName) {
 	document.documentElement.style.setProperty('--a-b', themeName.appBackground);
 	document.documentElement.style.setProperty('--f-h', themeName.foregroundHigh);
 	document.documentElement.style.setProperty('--f-m', themeName.foregroundMed);
@@ -36,13 +46,21 @@ function applyColourTheme(themeName) {
 	document.documentElement.style.setProperty('--b-l', themeName.backgroundLow);
 	document.documentElement.style.setProperty('--t-f', themeName.toneForeground);
 	document.documentElement.style.setProperty('--t-b', themeName.toneBackground);
-}
+};
+
 function declareBreakpoints(xl, l, m, s) {
 	breakPoint1 = xl;
 	breakPoint2 = l;
 	breakPoint3 = m;
 	breakPoint4 = s;
 }
+
+function getArgs() {
+	console.log(arguments);
+}
+
+getArgs('fsdsd', 'fsdfsd', 'fsdfdsfsd');
+
 function declareFontInBreakpoints(fontType, fontSize1, fontSize2, fontSize3, fontSize4, fontSize5) {
 	var lineHeight;
 	var letterSpacing;
@@ -88,3 +106,33 @@ declareFontInBreakpoints('h', '18px', '18px', '18px', '16px', '16px');
 declareFontInBreakpoints('sh', '12px', '12px', '12px', '12px', '12px');
 declareFontInBreakpoints('nt', '12px', '12px', '12px', '11px', '11px');
 declareFontInBreakpoints('misc', '13px', '13px', '13px', '13px', '12px');
+
+function idSelector(idName) {
+	return document.getElementById(idName);
+}
+
+var footerNav = document.createElement('div');
+footerNav.classList.add('footer-nav');
+footerNav.id = 'footer-nav';
+
+document.querySelector('.main-wrapper').appendChild(footerNav);
+
+function addNavItems(target, link) {
+	var anchorItems = document.createElement('a');
+	anchorItems.classList.add('nav-text');
+	anchorItems.innerHTML = target;
+	anchorItems.href = link;
+	anchorItems.target = 'blank';
+	document.querySelector('.footer-nav').appendChild(anchorItems);
+}
+
+addNavItems('GitHub', 'https://github.com/rtrikha');
+addNavItems('Dribbble', 'https://dribbble.com/rtrikha');
+addNavItems('Medium', 'https://medium.com/@rtrikha');
+
+idSelector('footer-nav').style.background = 'var(--a-b)';
+idSelector('footer-nav').style.display = 'flex';
+idSelector('footer-nav').style.position = 'fixed';
+idSelector('footer-nav').style.bottom = '0vh';
+idSelector('footer-nav').style.marginRight = '0';
+idSelector('footer-nav').style.justifyContent = 'flex-end';
