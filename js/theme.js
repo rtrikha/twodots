@@ -82,7 +82,6 @@ function declareFontInBreakpoints(fontType, fontSize1, fontSize2, fontSize3, fon
 }
 
 function callFooter() {
-
 	function addNavItems(target, link) {
 		var anchorItems = document.createElement('a');
 		anchorItems.classList.add('nav-text');
@@ -133,6 +132,7 @@ function callHeader() {
 	function idSelector(idName) {
 		return document.getElementById(idName);
 	}
+
 	idSelector(
 		'logo'
 	).outerHTML = `<svg id="e81md6xk4sbq1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#e81md6xk4sbq6_to {animation: e81md6xk4sbq6_to__to 1200ms linear 1 normal forwards}@keyframes e81md6xk4sbq6_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 25% {transform: translate(0px,12px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 50% {transform: translate(12px,12px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 75% {transform: translate(12px,0px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 100% {transform: translate(0px,0px)} }#e81md6xk4sbq7_to {animation: e81md6xk4sbq7_to__to 1200ms linear 1 normal forwards}@keyframes e81md6xk4sbq7_to__to { 0% {transform: translate(-0.054582px,0px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 25% {transform: translate(-0.054582px,-12px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 50% {transform: translate(-12.054582px,-12px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 75% {transform: translate(-12.054582px,0px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 100% {transform: translate(-0.054582px,0px)} }]]></style><g id="e81md6xk4sbq2"><g id="e81md6xk4sbq3" transform="matrix(1 0 0 1 -160 -86)"><g id="e81md6xk4sbq4" transform="matrix(1 0 0 1 160 83)"><g id="e81md6xk4sbq5" transform="matrix(1 0 0 1 0 3)"><g id="e81md6xk4sbq6_to" transform="translate(0,0)"><circle id="e81md6xk4sbq6" r="4.888890" transform="translate(6,6)" fill="rgb(255,255,255)" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g><g id="e81md6xk4sbq7_to" transform="translate(-0.054582,0)"><circle id="e81md6xk4sbq7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
@@ -154,11 +154,9 @@ declareBreakpoints(1440, 900, 720, 560);
 
 declareFontInBreakpoints('cta', '16px', '16px', '14px', '14px', '14px');
 declareFontInBreakpoints('h', '18px', '18px', '18px', '16px', '16px');
-declareFontInBreakpoints('sh', '12px', '12px', '12px', '12px', '12px');
+declareFontInBreakpoints('sh', '13px', '13px', '13px', '12px', '12px');
 declareFontInBreakpoints('nt', '12px', '12px', '12px', '11px', '11px');
-declareFontInBreakpoints('misc', '13px', '13px', '13px', '13px', '12px');
-
-
+declareFontInBreakpoints('misc', '14px', '14px', '14px', '14px', '13px');
 
 callHeader();
 callFooter();

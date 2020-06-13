@@ -101,7 +101,7 @@ body {
 	flex: 1 0 21%;
 	max-width: 33%;
 	flex-grow: 0;
-	margin-bottom: 4vh;
+	margin-bottom: 5vh;
 }
 
 /*
@@ -221,7 +221,7 @@ body {
 		max-width: 50%;
 	}
 	#arrow {
-		opacity: 1;
+		display: none;
 	}
 }
 
@@ -240,5 +240,40 @@ body {
 	#projects .flex-wrapper > div {
 		flex: 1 0 100%;
 		max-width: 100%;
+	}
+}
+
+.stroke-dash-1 {
+	color: #ffffff;
+	word-break: normal;
+	font-family: mono-300;
+	display: inline-flex;
+
+	&:after {
+		content: '';
+		position: absolute;
+		background: url(/resources/logo/stroke-dash.svg) no-repeat;
+		height: 2px;
+		width: 60px;
+		margin-top: 3.2vh;
+		margin-left: -0.6vw;
+		transform: rotate(1deg);
+	}
+}
+
+.stroke-dash-2 {
+	color: #ffffff;
+	word-break: normal;
+	font-family: mono-300;
+	display: inline-flex;
+
+	&:after {
+		content: '';
+		position: absolute;
+		background: url(/resources/logo/stroke-dash.svg) no-repeat;
+		height: 2px;
+		width: 60px;
+		margin-top: 3.2vh;
+		transform: rotate(181deg);
 	}
 }
