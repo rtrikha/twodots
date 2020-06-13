@@ -223,7 +223,7 @@ body {
 	#arrow {
 		display: none;
 	}
-	#e81md6xk4sbq1{
+	#e81md6xk4sbq1 {
 		transform: scale(0.9);
 	}
 }
@@ -251,6 +251,10 @@ body {
 	word-break: normal;
 	font-family: mono-300;
 	position: relative;
+	text-decoration: none;
+	&:hover {
+		color: #72dec2;
+	}
 
 	&:after {
 		content: '';
@@ -268,6 +272,10 @@ body {
 	word-break: normal;
 	font-family: mono-300;
 	position: relative;
+	text-decoration: none;
+	&:hover {
+		color: #72dec2;
+	}
 
 	&:after {
 		content: '';

@@ -373,6 +373,11 @@ body {
   word-break: normal;
   font-family: mono-300;
   position: relative;
+  text-decoration: none;
+}
+
+.stroke-dash-1:hover {
+  color: #72dec2;
 }
 
 .stroke-dash-1:after {
@@ -390,6 +395,11 @@ body {
   word-break: normal;
   font-family: mono-300;
   position: relative;
+  text-decoration: none;
+}
+
+.stroke-dash-2:hover {
+  color: #72dec2;
 }
 
 .stroke-dash-2:after {
