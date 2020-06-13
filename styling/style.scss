@@ -32,7 +32,7 @@ body {
 		}
 		.subheading {
 			@include misc-text;
-			padding-top: 2vh;
+			padding-top: 1vh;
 			opacity: 0;
 			width: 50%;
 			animation-name: show-objects;
@@ -223,6 +223,9 @@ body {
 	#arrow {
 		display: none;
 	}
+	#e81md6xk4sbq1{
+		transform: scale(0.9);
+	}
 }
 
 @media screen and (max-width: 420px) {
@@ -247,7 +250,7 @@ body {
 	color: #ffffff;
 	word-break: normal;
 	font-family: mono-300;
-	display: inline-flex;
+	position: relative;
 
 	&:after {
 		content: '';
@@ -255,9 +258,8 @@ body {
 		background: url(/resources/logo/stroke-dash.svg) no-repeat;
 		height: 2px;
 		width: 60px;
-		margin-top: 3.2vh;
-		margin-left: -0.6vw;
-		transform: rotate(1deg);
+		left: -16%;
+		margin-top: 3vh;
 	}
 }
 
@@ -265,7 +267,7 @@ body {
 	color: #ffffff;
 	word-break: normal;
 	font-family: mono-300;
-	display: inline-flex;
+	position: relative;
 
 	&:after {
 		content: '';
@@ -273,7 +275,7 @@ body {
 		background: url(/resources/logo/stroke-dash.svg) no-repeat;
 		height: 2px;
 		width: 60px;
-		margin-top: 3.2vh;
-		transform: rotate(181deg);
+		left: -10%;
+		margin-top: 3vh;
 	}
 }

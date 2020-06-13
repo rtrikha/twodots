@@ -1,7 +1,7 @@
 var breakPoint1, breakPoint2, breakPoint3, breakPoint4;
 
 const letterSpacingValue = -30;
-const lineHeightValue = 0.56;
+const lineHeightValue = 0.52;
 
 const Themes = {
 	stock: {
@@ -126,8 +126,6 @@ function callHeader() {
 		anchorItems.target = 'blank';
 		document.querySelector('.header-nav').appendChild(anchorItems);
 	}
-
-	addNavItems('About', '');
 
 	function idSelector(idName) {
 		return document.getElementById(idName);

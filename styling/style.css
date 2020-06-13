@@ -70,7 +70,7 @@ body {
   font-size: var(--f-t-misc);
   letter-spacing: var(--l-s-misc);
   line-height: var(--l-h-misc);
-  padding-top: 2vh;
+  padding-top: 1vh;
   opacity: 0;
   width: 50%;
   -webkit-animation-name: show-objects;
@@ -344,6 +344,10 @@ body {
   #arrow {
     display: none;
   }
+  #e81md6xk4sbq1 {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
 }
 
 @media screen and (max-width: 420px) {
@@ -368,9 +372,7 @@ body {
   color: #ffffff;
   word-break: normal;
   font-family: mono-300;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  position: relative;
 }
 
 .stroke-dash-1:after {
@@ -379,19 +381,15 @@ body {
   background: url(/resources/logo/stroke-dash.svg) no-repeat;
   height: 2px;
   width: 60px;
-  margin-top: 3.2vh;
-  margin-left: -0.6vw;
-  -webkit-transform: rotate(1deg);
-          transform: rotate(1deg);
+  left: -16%;
+  margin-top: 3vh;
 }
 
 .stroke-dash-2 {
   color: #ffffff;
   word-break: normal;
   font-family: mono-300;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  position: relative;
 }
 
 .stroke-dash-2:after {
@@ -400,8 +398,7 @@ body {
   background: url(/resources/logo/stroke-dash.svg) no-repeat;
   height: 2px;
   width: 60px;
-  margin-top: 3.2vh;
-  -webkit-transform: rotate(181deg);
-          transform: rotate(181deg);
+  left: -10%;
+  margin-top: 3vh;
 }
 /*# sourceMappingURL=style.css.map */
