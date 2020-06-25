@@ -71,6 +71,7 @@ body {
   letter-spacing: var(--l-s-sh);
   line-height: var(--l-h-sh);
   padding-top: 2vh;
+  text-decoration: none !important;
   width: 50%;
 }
 
@@ -227,11 +228,14 @@ body {
 }
 
 @media screen and (max-width: 420px) {
+  .main-wrapper .header-nav {
+    padding-top: 6vh;
+  }
   .footer-nav .nav-text {
     margin-left: 10vw;
   }
   .content-wrapper {
-    padding-top: 8vh;
+    padding-top: 6vh;
   }
   .content-wrapper .hero-wrapper .heading {
     padding: 24px;
@@ -246,9 +250,5 @@ body {
             flex: 1 0 100%;
     max-width: 100%;
   }
-}
-
-.logo {
-  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

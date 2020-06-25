@@ -36,6 +36,7 @@ body {
 		.subheading {
 			@include sub-heading;
 			padding-top: 2vh;
+			text-decoration: none !important;
 			width: 50%;
 
 			a {
@@ -173,13 +174,18 @@ body {
 }
 
 @media screen and (max-width: 420px) {
+	.main-wrapper {
+		.header-nav {
+			padding-top: 6vh;
+		}
+	}
 	.footer-nav {
 		.nav-text {
 			margin-left: 10vw;
 		}
 	}
 	.content-wrapper {
-		padding-top: 8vh;
+		padding-top: 6vh;
 
 		.hero-wrapper {
 			.heading {
@@ -195,8 +201,4 @@ body {
 		flex: 1 0 100%;
 		max-width: 100%;
 	}
-}
-
-.logo{
-	cursor: pointer;
 }

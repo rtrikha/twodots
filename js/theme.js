@@ -29,7 +29,7 @@ const Themes = {
 	warmSnow: {
 		appBackground: '#FFFDFA',
 		foregroundHigh: '#2A2826',
-		foregroundMed: '#676164',
+		foregroundMed: '#54504C',
 		foregroundLow: '#BDB8B8',
 		foregroundInverted: '#000D18',
 		backgroundHigh: '#093748',
