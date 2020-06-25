@@ -80,11 +80,11 @@ body {
 }
 
 .content-wrapper .hero-wrapper .subheading a:visited {
-  color: white !important;
+  color: var(--f-h) !important;
 }
 
 .content-wrapper .hero-wrapper .subheading a:link {
-  color: white !important;
+  color: var(--f-h) !important;
 }
 
 .content-wrapper #projects {
