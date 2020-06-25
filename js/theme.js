@@ -1,11 +1,11 @@
 var breakPoint1, breakPoint2, breakPoint3, breakPoint4;
 
-const letterSpacingValue = -30;
-const lineHeightValue = 0.52;
+const letterSpacingValue = -40;
+const lineHeightValue = 1.8;
 
 const Themes = {
 	stock: {
-		appBackground: '#0D0D0D',
+		appBackground: '#000',
 		foregroundHigh: '#FFFFFF',
 		foregroundMed: '#A1A1A6',
 		foregroundLow: '#4C4C4E',
@@ -24,6 +24,17 @@ const Themes = {
 		backgroundHigh: '#093748',
 		backgroundMed: '#081F2D',
 		backgroundLow: ' #10151B',
+		backgroundInverted: '#8FAF9F',
+	},
+	warmSnow: {
+		appBackground: '#FFFDFA',
+		foregroundHigh: '#2A2826',
+		foregroundMed: '#676164',
+		foregroundLow: '#BDB8B8',
+		foregroundInverted: '#000D18',
+		backgroundHigh: '#093748',
+		backgroundMed: '#081F2D',
+		backgroundLow: '#fff',
 		backgroundInverted: '#8FAF9F',
 	},
 };
@@ -55,7 +66,7 @@ function declareFontInBreakpoints(fontType, fontSize1, fontSize2, fontSize3, fon
 		document.documentElement.style.setProperty(`--l-h-${fontType}`, lineHeight);
 	}
 	function declatreAttributes(fontSize) {
-		lineHeight = `${Math.round(parseInt(fontSize, 10) / lineHeightValue)}px`;
+		lineHeight = `${Math.round(parseInt(fontSize, 10) * lineHeightValue)}px`;
 		letterSpacing = `${(parseInt(fontSize, 10) / letterSpacingValue).toFixed(1)}px`;
 	}
 	if (screen.width >= breakPoint1) {
@@ -116,7 +127,12 @@ function callHeader() {
 	logo.classList.add('logo');
 	logo.id = 'logo';
 
-	document.getElementById('header-nav').appendChild(logo);
+	var logoWrapper = document.createElement('div');
+	logoWrapper.classList.add('logo-wrapper');
+	logoWrapper.id = 'logo-wrapper';
+
+	document.getElementById('header-nav').appendChild(logoWrapper);
+	document.getElementById('logo-wrapper').appendChild(logo);
 
 	function addNavItems(target, link) {
 		var anchorItems = document.createElement('a');
@@ -133,15 +149,45 @@ function callHeader() {
 
 	idSelector(
 		'logo'
-	).outerHTML = `<svg id="e81md6xk4sbq1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#e81md6xk4sbq6_to {animation: e81md6xk4sbq6_to__to 1200ms linear 1 normal forwards}@keyframes e81md6xk4sbq6_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 25% {transform: translate(0px,12px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 50% {transform: translate(12px,12px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 75% {transform: translate(12px,0px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 100% {transform: translate(0px,0px)} }#e81md6xk4sbq7_to {animation: e81md6xk4sbq7_to__to 1200ms linear 1 normal forwards}@keyframes e81md6xk4sbq7_to__to { 0% {transform: translate(-0.054582px,0px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 25% {transform: translate(-0.054582px,-12px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 50% {transform: translate(-12.054582px,-12px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 75% {transform: translate(-12.054582px,0px);animation-timing-function: cubic-bezier(0.645000,0.045000,0.355000,1)} 100% {transform: translate(-0.054582px,0px)} }]]></style><g id="e81md6xk4sbq2"><g id="e81md6xk4sbq3" transform="matrix(1 0 0 1 -160 -86)"><g id="e81md6xk4sbq4" transform="matrix(1 0 0 1 160 83)"><g id="e81md6xk4sbq5" transform="matrix(1 0 0 1 0 3)"><g id="e81md6xk4sbq6_to" transform="translate(0,0)"><circle id="e81md6xk4sbq6" r="4.888890" transform="translate(6,6)" fill="rgb(255,255,255)" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g><g id="e81md6xk4sbq7_to" transform="translate(-0.054582,0)"><circle id="e81md6xk4sbq7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
+	).outerHTML = `<svg id="1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#e1f34n7zt81l6_to {animation: e1f34n7zt81l6_to__to 3000ms linear 1 normal forwards}@keyframes e1f34n7zt81l6_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 10% {transform: translate(0px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 20% {transform: translate(12px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 30% {transform: translate(12px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 40% {transform: translate(0px,0px)} 100% {transform: translate(0px,0px)} }#e1f34n7zt81l7_to {animation: e1f34n7zt81l7_to__to 3000ms linear 1 normal forwards}@keyframes e1f34n7zt81l7_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 10% {transform: translate(0px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 20% {transform: translate(-12px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 30% {transform: translate(-12px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 40% {transform: translate(0px,0px)} 100% {transform: translate(0px,0px)} }]]></style><g id="e1f34n7zt81l2"><g id="e1f34n7zt81l3" transform="matrix(1 0 0 1 -160 -86)"><g id="e1f34n7zt81l4" transform="matrix(1 0 0 1 160 83)"><g id="e1f34n7zt81l5" transform="matrix(1 0 0 1 0 3)"><g id="e1f34n7zt81l6_to" transform="translate(0,0)"><circle id="e1f34n7zt81l6" r="4.888890" transform="translate(6,6)" fill="rgb(255,255,255)" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g><g id="e1f34n7zt81l7_to" transform="translate(0,0)"><circle id="e1f34n7zt81l7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
 	idSelector('header-nav').style.background = 'var(--a-b)';
 	idSelector('header-nav').style.display = 'flex';
 	idSelector('header-nav').style.position = 'relative';
 	idSelector('header-nav').style.alignItems = 'center';
-	idSelector('header-nav').style.paddingTop = '6vh';
+	idSelector('header-nav').style.paddingTop = '8vh';
 	idSelector('header-nav').style.marginRight = 0;
 	idSelector('header-nav').style.textDecoration = 'none';
 	idSelector('header-nav').style.justifyContent = 'space-between';
+	idSelector('logo-wrapper').style.padding = '20px';
+	idSelector('logo-wrapper').style.cursor = 'pointer';
+	idSelector('logo-wrapper').onclick = function () {
+		changeTheme();
+	};
+	idSelector('logo-wrapper').style.paddingLeft = '0px';
+
+	function changeTheme() {
+		if (document.getElementById('2') == null && document.getElementById('3') == null) {
+			applyColourTheme('warmSnow');
+
+			document.getElementById(
+				'1'
+			).outerHTML = `<svg id="2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#evhp9hzm9nkc6_to {animation: evhp9hzm9nkc6_to__to 600ms linear 1 normal forwards}@keyframes evhp9hzm9nkc6_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(0px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(12px,12px)} }#evhp9hzm9nkc7_to {animation: evhp9hzm9nkc7_to__to 600ms linear 1 normal forwards}@keyframes evhp9hzm9nkc7_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(0px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(-12px,-12px)} }]]></style><g id="evhp9hzm9nkc2"><g id="evhp9hzm9nkc3" transform="matrix(1 0 0 1 -160 -86)"><g id="evhp9hzm9nkc4" transform="matrix(1 0 0 1 160 83)"><g id="evhp9hzm9nkc5" transform="matrix(1 0 0 1 0 3)"><g id="evhp9hzm9nkc6_to" transform="translate(0,0)"><circle id="evhp9hzm9nkc6" r="4.888890" transform="translate(6,6)" fill="rgb(0,0,0)" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-width="2.222220"/></g><g id="evhp9hzm9nkc7_to" transform="translate(0,0)"><circle id="evhp9hzm9nkc7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
+		} else if (document.getElementById('1') == null && document.getElementById('3') == null) {
+			console.log('b');
+			applyColourTheme('stock');
+
+			document.getElementById(
+				'2'
+			).outerHTML = `<svg id="3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#etz1smyjhqj6_to {animation: etz1smyjhqj6_to__to 600ms linear 1 normal forwards}@keyframes etz1smyjhqj6_to__to { 0% {transform: translate(12px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(12px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(0px,0px)} }#etz1smyjhqj7_to {animation: etz1smyjhqj7_to__to 600ms linear 1 normal forwards}@keyframes etz1smyjhqj7_to__to { 0% {transform: translate(-12px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(-12px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(0px,0px)} }]]></style><g id="etz1smyjhqj2"><g id="etz1smyjhqj3" transform="matrix(1 0 0 1 -160 -86)"><g id="etz1smyjhqj4" transform="matrix(1 0 0 1 160 83)"><g id="etz1smyjhqj5" transform="matrix(1 0 0 1 0 3)"><g id="etz1smyjhqj6_to" transform="translate(12,12)"><circle id="etz1smyjhqj6" r="4.888890" transform="translate(6,6)" fill="rgb(255,255,255)" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g><g id="etz1smyjhqj7_to" transform="translate(-12,-12)"><circle id="etz1smyjhqj7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(255,255,255)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
+		} else if (document.getElementById('1') == null && document.getElementById('2') == null) {
+			console.log('c');
+			applyColourTheme('warmSnow');
+
+			document.getElementById(
+				'3'
+			).outerHTML = `<svg id="2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" width="24" height="24"><style><![CDATA[#evhp9hzm9nkc6_to {animation: evhp9hzm9nkc6_to__to 600ms linear 1 normal forwards}@keyframes evhp9hzm9nkc6_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(0px,12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(12px,12px)} }#evhp9hzm9nkc7_to {animation: evhp9hzm9nkc7_to__to 600ms linear 1 normal forwards}@keyframes evhp9hzm9nkc7_to__to { 0% {transform: translate(0px,0px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 50% {transform: translate(0px,-12px);animation-timing-function: cubic-bezier(0.860000,0,0.070000,1)} 100% {transform: translate(-12px,-12px)} }]]></style><g id="evhp9hzm9nkc2"><g id="evhp9hzm9nkc3" transform="matrix(1 0 0 1 -160 -86)"><g id="evhp9hzm9nkc4" transform="matrix(1 0 0 1 160 83)"><g id="evhp9hzm9nkc5" transform="matrix(1 0 0 1 0 3)"><g id="evhp9hzm9nkc6_to" transform="translate(0,0)"><circle id="evhp9hzm9nkc6" r="4.888890" transform="translate(6,6)" fill="rgb(0,0,0)" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-width="2.222220"/></g><g id="evhp9hzm9nkc7_to" transform="translate(0,0)"><circle id="evhp9hzm9nkc7" r="4.888890" transform="translate(18,18)" fill="none" fill-rule="evenodd" stroke="rgb(0,0,0)" stroke-width="2.222220"/></g></g></g></g></g></svg>`;
+		}
+	}
 }
 
 // define the theme here
@@ -151,10 +197,11 @@ applyColourTheme('stock');
 declareBreakpoints(1440, 900, 720, 560);
 
 declareFontInBreakpoints('cta', '16px', '16px', '14px', '14px', '14px');
-declareFontInBreakpoints('h', '18px', '18px', '18px', '16px', '16px');
-declareFontInBreakpoints('sh', '13px', '13px', '13px', '12px', '12px');
+declareFontInBreakpoints('h', '24px', '24px', '22px', '20px', '20px');
+declareFontInBreakpoints('sh', '14px', '14px', '14px', '13px', '13px');
 declareFontInBreakpoints('nt', '12px', '12px', '12px', '11px', '11px');
-declareFontInBreakpoints('misc', '14px', '14px', '14px', '14px', '13px');
+declareFontInBreakpoints('body-1', '14px', '14px', '14px', '13px', '13px');
+declareFontInBreakpoints('body-2', '13px', '13px', '13px', '12px', '12px');
 
 callHeader();
 callFooter();

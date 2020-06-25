@@ -24,9 +24,13 @@ $f-t-nt: var(--f-t-nt);
 $l-s-nt: var(--l-s-nt);
 $l-h-nt: var(--l-h-nt);
 
-$f-t-misc: var(--f-t-misc);
-$l-s-misc: var(--l-s-misc);
-$l-h-misc: var(--l-h-misc);
+$f-t-body-2: var(--f-t-body-2);
+$l-s-body-2: var(--l-s-body-2);
+$l-h-body-2: var(--l-h-body-2);
+
+$f-t-body-1: var(--f-t-body-1);
+$l-s-body-1: var(--l-s-body-1);
+$l-h-body-1: var(--l-h-bodyp-1);
 
 @mixin cta {
 	color: $t-f;
@@ -46,6 +50,7 @@ $l-h-misc: var(--l-h-misc);
 
 @mixin heading {
 	color: $f-h;
+	background-color: $f-h;
 	font-family: mono-300, monospace;
 	font-size: $f-t-h;
 	letter-spacing: $l-s-h;
@@ -76,22 +81,24 @@ $l-h-misc: var(--l-h-misc);
 	}
 }
 
-@mixin misc-text {
+@mixin body-1 {
+	color: $f-h;
+	font-family: mono-300, monospace;
+	font-size: $f-t-body-1;
+	letter-spacing: $l-s-body-1;
+	line-height: $l-h-body-1;
+}
+@mixin body-2 {
 	color: $f-m;
 	font-family: mono-300, monospace;
-	font-size: $f-t-misc;
-	letter-spacing: $l-s-misc;
-	line-height: $l-h-misc;
+	font-size: $f-t-body-2;
+	letter-spacing: $l-s-body-2;
+	line-height: $l-h-body-2;
 }
 
 @font-face {
-	src: url(/resources/fonts/mono-300.ttf);
+	src: url(/resources/fonts/mono-300.OTF);
 	font-family: mono-300;
-}
-
-@font-face {
-	src: url(/resources/fonts/mono-500.ttf);
-	font-family: mono-500;
 }
 
 @font-face {

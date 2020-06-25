@@ -19,68 +19,57 @@ body {
 	height: 100vh;
 }
 
-.dud {
-	color: $f-l;
-}
 .content-wrapper {
-	padding-top: 8vh;
+	padding-top: 10vh;
 	padding-bottom: 8vh;
 
 	.hero-wrapper {
 		.heading {
 			@include heading;
+			color: $b-l;
+			padding: 28px;
+			padding-top: 32px;
+			background-color: $f-h;
+			width: max-content;
+			line-height: 0px;
 		}
 		.subheading {
-			@include misc-text;
-			padding-top: 1vh;
-			opacity: 0;
+			@include sub-heading;
+			padding-top: 2vh;
 			width: 50%;
-			animation-name: show-objects;
-			animation-duration: 0.3s;
-			animation-delay: 1s;
-			animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
-			animation-fill-mode: forwards;
+
+			a {
+				text-decoration: none;
+
+				&:visited {
+					color: $f-h;
+				}
+			}
 		}
 	}
 	#projects {
 		padding-top: 10vh;
-		opacity: 0;
-		animation-name: show-objects;
-		animation-duration: 0.3s;
-		animation-delay: 1.4s;
-		animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
-		animation-fill-mode: forwards;
 
 		.heading {
-			@include sub-heading;
+			@include body-1;
 			color: $f-h;
 		}
 
 		.subheading {
-			@include sub-heading;
-			color: $t-f;
-			padding-top: 0.5vh;
+			@include body-2;
+			color: $f-m;
+			opacity: 0.7;
+			padding-top: 1.5vh;
 		}
 	}
-}
-
-#arrow {
-	opacity: 0;
-	background-repeat: no-repeat;
-	left: 0;
-	bottom: 0;
-	margin-top: 16px;
 }
 
 .project-list a:hover {
 	cursor: pointer;
 }
 
-.project-list a:hover > #arrow {
-	animation-name: move-arrow;
-	animation-duration: 0.4s;
-	animation-timing-function: cubic-bezier(0.59, 0, 0.42, 0.99);
-	animation-fill-mode: forwards;
+.project-list:hover .subheading {
+	opacity: 1 !important;
 }
 
 .project-list a:visited {
@@ -111,11 +100,6 @@ body {
 */
 .footer-nav {
 	width: 80vw;
-	opacity: 0;
-	animation: move-footer;
-	animation-fill-mode: forwards !important;
-	animation-duration: 0.6s;
-	animation-delay: 1.8s;
 
 	.nav-text {
 		@include nav-text;
@@ -124,49 +108,9 @@ body {
 }
 /*
 
-* All the animations
+* All the media queries
 
 */
-
-@keyframes move-arrow {
-	from {
-		opacity: 0;
-		transform: translateX(-4px);
-	}
-	to {
-		opacity: 1;
-		transform: translateX(0px);
-	}
-}
-
-@keyframes show-context {
-	from {
-	}
-	to {
-		opacity: 0.3;
-	}
-}
-
-@keyframes show-objects {
-	from {
-		opacity: 0;
-		transform: translatey(1vh);
-	}
-	to {
-		opacity: 1;
-		transform: translatey(0vh);
-	}
-}
-
-@keyframes move-footer {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-		display: block;
-	}
-}
 
 @media screen and (max-width: 720px) {
 	.footer-nav {
@@ -236,6 +180,13 @@ body {
 	}
 	.content-wrapper {
 		padding-top: 8vh;
+
+		.hero-wrapper {
+			.heading {
+				padding: 24px;
+				padding-top: 30px;
+			}
+		}
 		#projects {
 			padding-top: 8vh;
 		}
@@ -246,44 +197,6 @@ body {
 	}
 }
 
-.stroke-dash-1 {
-	color: #ffffff;
-	word-break: normal;
-	font-family: mono-300;
-	position: relative;
-	text-decoration: none;
-	&:hover {
-		color: #72dec2;
-	}
-
-	&:after {
-		content: '';
-		position: absolute;
-		background: url(/resources/logo/stroke-dash.svg) no-repeat;
-		height: 2px;
-		width: 60px;
-		left: -16%;
-		margin-top: 3vh;
-	}
-}
-
-.stroke-dash-2 {
-	color: #ffffff;
-	word-break: normal;
-	font-family: mono-300;
-	position: relative;
-	text-decoration: none;
-	&:hover {
-		color: #72dec2;
-	}
-
-	&:after {
-		content: '';
-		position: absolute;
-		background: url(/resources/logo/stroke-dash.svg) no-repeat;
-		height: 2px;
-		width: 60px;
-		left: -10%;
-		margin-top: 3vh;
-	}
+.logo{
+	cursor: pointer;
 }
