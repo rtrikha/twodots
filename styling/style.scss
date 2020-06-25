@@ -43,7 +43,10 @@ body {
 				text-decoration: none;
 
 				&:visited {
-					color: $f-h;
+					color: white !important;
+				}
+				&:link{
+					color: white !important;
 				}
 			}
 		}
@@ -75,10 +78,13 @@ body {
 
 .project-list a:visited {
 	text-decoration: none;
+	@include sub-heading;
+	color: white;
 }
 
 .project-list a:link {
 	text-decoration: none;
+	@include sub-heading;
 }
 
 .flex-wrapper {
@@ -176,7 +182,7 @@ body {
 @media screen and (max-width: 420px) {
 	.main-wrapper {
 		.header-nav {
-			padding-top: 6vh;
+			padding-top: 6vh !important;
 		}
 	}
 	.footer-nav {

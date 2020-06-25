@@ -80,7 +80,11 @@ body {
 }
 
 .content-wrapper .hero-wrapper .subheading a:visited {
-  color: var(--f-h);
+  color: white !important;
+}
+
+.content-wrapper .hero-wrapper .subheading a:link {
+  color: white !important;
 }
 
 .content-wrapper #projects {
@@ -117,10 +121,21 @@ body {
 
 .project-list a:visited {
   text-decoration: none;
+  color: var(--f-m);
+  font-family: mono-300, monospace;
+  font-size: var(--f-t-sh);
+  letter-spacing: var(--l-s-sh);
+  line-height: var(--l-h-sh);
+  color: white;
 }
 
 .project-list a:link {
   text-decoration: none;
+  color: var(--f-m);
+  font-family: mono-300, monospace;
+  font-size: var(--f-t-sh);
+  letter-spacing: var(--l-s-sh);
+  line-height: var(--l-h-sh);
 }
 
 .flex-wrapper {
@@ -229,7 +244,7 @@ body {
 
 @media screen and (max-width: 420px) {
   .main-wrapper .header-nav {
-    padding-top: 6vh;
+    padding-top: 6vh !important;
   }
   .footer-nav .nav-text {
     margin-left: 10vw;
