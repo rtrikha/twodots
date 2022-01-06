@@ -103,7 +103,6 @@ function callFooter() {
 	}
 
 	addNavItems('GitHub', 'https://github.com/rtrikha');
-	addNavItems('Dribbble', 'https://dribbble.com/rtrikha');
 	addNavItems('Medium', 'https://medium.com/@rtrikha');
 
 	document.querySelector('.footer-nav').id = 'footer-nav';
