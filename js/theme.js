@@ -191,7 +191,7 @@ function callHeader() {
 
 // define the theme here
 
-applyColourTheme('gotham');
+applyColourTheme('stock');
 
 declareBreakpoints(1440, 900, 720, 560);
 
