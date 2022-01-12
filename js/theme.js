@@ -104,6 +104,7 @@ function callFooter() {
 
 	addNavItems('GitHub', 'https://github.com/rtrikha');
 	addNavItems('Medium', 'https://medium.com/@rtrikha');
+	addNavItems('information as on 11-Jan-2022', '');
 
 	document.querySelector('.footer-nav').id = 'footer-nav';
 
