@@ -102,9 +102,9 @@ function callFooter() {
 		document.querySelector('.footer-nav').appendChild(anchorItems);
 	}
 
+	addNavItems('information as on 11-Jan-2022', '');
 	addNavItems('GitHub', 'https://github.com/rtrikha');
 	addNavItems('Medium', 'https://medium.com/@rtrikha');
-	addNavItems('information as on 11-Jan-2022', '');
 
 	document.querySelector('.footer-nav').id = 'footer-nav';
 
@@ -204,4 +204,4 @@ declareFontInBreakpoints('body-1', '14px', '14px', '14px', '13px', '13px');
 declareFontInBreakpoints('body-2', '13px', '13px', '13px', '12px', '12px');
 
 callHeader();
-callFooter();
+//callFooter();

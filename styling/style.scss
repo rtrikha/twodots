@@ -107,10 +107,24 @@ body {
 */
 .footer-nav {
 	width: 80vw;
+	display: flex;
+	position: fixed;
+	bottom: 0vh;
+	margin-right: 0;
+	background-color: var(--a-b);
+	justify-content: space-between;
 
-	.nav-text {
+	.lhs {
 		@include nav-text;
-		margin-left: 3vw;
+		opacity: 0.6;
+		cursor: auto;
+	}
+	.rhs {
+		padding-top: 3vh;
+		a {
+			margin-left: 3vw;
+			@include nav-text;
+		}
 	}
 }
 /*

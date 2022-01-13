@@ -165,9 +165,19 @@ body {
 */
 .footer-nav {
   width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  bottom: 0vh;
+  margin-right: 0;
+  background-color: var(--a-b);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.footer-nav .nav-text {
+.footer-nav .lhs {
   color: var(--f-l);
   font-family: heading;
   font-size: var(--f-t-nt);
@@ -178,10 +188,33 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  margin-left: 3vw;
+  opacity: 0.6;
+  cursor: auto;
 }
 
-.footer-nav .nav-text:hover {
+.footer-nav .lhs:hover {
+  color: var(--f-m);
+}
+
+.footer-nav .rhs {
+  padding-top: 3vh;
+}
+
+.footer-nav .rhs a {
+  margin-left: 3vw;
+  color: var(--f-l);
+  font-family: heading;
+  font-size: var(--f-t-nt);
+  letter-spacing: 0px;
+  line-height: var(--l-h-nt);
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-nav .rhs a:hover {
   color: var(--f-m);
 }
 
