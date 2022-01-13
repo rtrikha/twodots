@@ -92,33 +92,33 @@ function declareFontInBreakpoints(fontType, fontSize1, fontSize2, fontSize3, fon
 	}
 }
 
-function callFooter() {
-	function addNavItems(target, link) {
-		var anchorItems = document.createElement('a');
-		anchorItems.classList.add('nav-text');
-		anchorItems.innerHTML = target;
-		anchorItems.href = link;
-		anchorItems.target = 'blank';
-		document.querySelector('.footer-nav').appendChild(anchorItems);
-	}
+// function callFooter() {
+// 	function addNavItems(target, link) {
+// 		var anchorItems = document.createElement('a');
+// 		anchorItems.classList.add('nav-text');
+// 		anchorItems.innerHTML = target;
+// 		anchorItems.href = link;
+// 		anchorItems.target = 'blank';
+// 		document.querySelector('.footer-nav').appendChild(anchorItems);
+// 	}
 
-	addNavItems('information as on 11-Jan-2022', '');
-	addNavItems('GitHub', 'https://github.com/rtrikha');
-	addNavItems('Medium', 'https://medium.com/@rtrikha');
+// 	addNavItems('information as on 11-Jan-2022', '');
+// 	addNavItems('GitHub', 'https://github.com/rtrikha');
+// 	addNavItems('Medium', 'https://medium.com/@rtrikha');
 
-	document.querySelector('.footer-nav').id = 'footer-nav';
+// 	document.querySelector('.footer-nav').id = 'footer-nav';
 
-	function idSelector(idName) {
-		return document.getElementById(idName);
-	}
+// 	function idSelector(idName) {
+// 		return document.getElementById(idName);
+// 	}
 
-	idSelector('footer-nav').style.background = 'var(--a-b)';
-	idSelector('footer-nav').style.display = 'flex';
-	idSelector('footer-nav').style.position = 'fixed';
-	idSelector('footer-nav').style.bottom = '0vh';
-	idSelector('footer-nav').style.marginRight = '0';
-	idSelector('footer-nav').style.justifyContent = 'flex-end';
-}
+// 	idSelector('footer-nav').style.background = 'var(--a-b)';
+// 	idSelector('footer-nav').style.display = 'flex';
+// 	idSelector('footer-nav').style.position = 'fixed';
+// 	idSelector('footer-nav').style.bottom = '0vh';
+// 	idSelector('footer-nav').style.marginRight = '0';
+// 	idSelector('footer-nav').style.justifyContent = 'flex-end';
+// }
 
 function callHeader() {
 	document.querySelector('.header-nav').id = 'header-nav';
