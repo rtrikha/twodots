@@ -49,6 +49,9 @@ body {
 
 .content-wrapper .hero-wrapper .heading {
   color: var(--f-h);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: var(--f-h);
   font-family: mono-300, monospace;
   font-size: var(--f-t-h);

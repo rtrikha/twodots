@@ -50,6 +50,7 @@ $l-h-body-1: var(--l-h-bodyp-1);
 
 @mixin heading {
 	color: $f-h;
+	display: flex;
 	background-color: $f-h;
 	font-family: mono-300, monospace;
 	font-size: $f-t-h;
