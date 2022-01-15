@@ -55,6 +55,21 @@ $l-h-body-1: var(--l-h-bodyp-1);
 	font-size: $f-t-h;
 	letter-spacing: $l-s-h;
 	line-height: $l-h-h;
+	animation-name: transition-y;
+	animation-duration: 0.4s;
+	animation-direction: normal;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.2s;
+	opacity: 0;
+	@keyframes transition-y {
+		0% {
+			transform: translateY(2vh);
+		}
+		to {
+			opacity: 1;
+		}
+	}
 }
 
 @mixin sub-heading {
@@ -63,6 +78,21 @@ $l-h-body-1: var(--l-h-bodyp-1);
 	font-size: $f-t-sh;
 	letter-spacing: $l-s-sh;
 	line-height: $l-h-sh;
+	animation-name: transition-y;
+	animation-duration: 0.4s;
+	animation-direction: normal;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.4s;
+	opacity: 0;
+	@keyframes transition-y {
+		0% {
+			transform: translateY(2vh);
+		}
+		to {
+			opacity: 1;
+		}
+	}
 }
 
 @mixin nav-text {

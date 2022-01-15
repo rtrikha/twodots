@@ -53,7 +53,21 @@ body {
 	}
 	#projects {
 		padding-top: 10vh;
-
+		animation-name: transition-y;
+		animation-duration: 0.4s;
+		animation-direction: normal;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+		animation-delay: 1.6s;
+		opacity: 0;
+		@keyframes transition-y {
+			0% {
+				transform: translateY(2vh);
+			}
+			to {
+				opacity: 1;
+			}
+		}
 		.heading {
 			@include body-1;
 			color: $f-h;
@@ -113,7 +127,6 @@ body {
 	margin-right: 0;
 	background-color: var(--a-b);
 	justify-content: space-between;
-
 	.lhs {
 		@include nav-text;
 		opacity: 0.6;
@@ -125,6 +138,33 @@ body {
 			margin-left: 3vw;
 			@include nav-text;
 		}
+	}
+
+	animation-name: transition-y;
+	animation-duration: 0.4s;
+	animation-direction: normal;
+	animation-timing-function: ease-in-out;
+	animation-fill-mode: forwards;
+	animation-delay: 1.8s;
+	opacity: 0;
+	@keyframes transition-y {
+		0% {
+			transform: translateY(2vh);
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	.heading {
+		@include body-1;
+		color: $f-h;
+	}
+
+	.subheading {
+		@include body-2;
+		color: $f-m;
+		opacity: 0.7;
+		padding-top: 1.5vh;
 	}
 }
 /*
