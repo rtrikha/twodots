@@ -205,3 +205,18 @@ declareFontInBreakpoints('body-2', '13px', '13px', '13px', '12px', '12px');
 
 callHeader();
 //callFooter();
+
+const globalColours = {
+	grey: {
+		g100: 'fafafa',
+	},
+};
+
+const applicationColours = {
+	text: {
+		textDiabled: globalColours.grey.g100,
+	},
+	accent: {
+		applicationSecondary: globalColours.grey.g100,
+	},
+};
