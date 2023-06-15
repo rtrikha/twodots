@@ -2,19 +2,16 @@
   src: url(/resources/fonts/mono-300.OTF);
   font-family: mono-300;
 }
-
 @font-face {
   src: url(/resources/fonts/heading.ttf);
   font-family: heading;
 }
-
 body {
   background-color: var(--a-b);
   -webkit-font-smoothing: antialiased;
   margin: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -30,7 +27,6 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
 .header-nav .nav-text:hover {
   color: var(--f-m);
 }
@@ -46,133 +42,89 @@ body {
   padding-top: 8vh;
   padding-bottom: 8vh;
 }
-
 .content-wrapper .hero-wrapper .heading {
   color: var(--f-h);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: var(--f-h);
   font-family: mono-300, monospace;
   font-size: var(--f-t-h);
   letter-spacing: var(--l-s-h);
   line-height: var(--l-h-h);
-  -webkit-animation-name: transition-y;
-          animation-name: transition-y;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
+  animation-name: transition-y;
+  animation-duration: 0.4s;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.2s;
   opacity: 0;
   color: var(--b-l);
   padding: 28px;
   padding-top: 32px;
   background-color: var(--f-h);
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   line-height: 0px;
 }
-
-@-webkit-keyframes transition-y {
-  0% {
-    -webkit-transform: translateY(2vh);
-            transform: translateY(2vh);
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @keyframes transition-y {
   0% {
-    -webkit-transform: translateY(2vh);
-            transform: translateY(2vh);
+    transform: translateY(2vh);
   }
   to {
     opacity: 1;
   }
 }
-
 .content-wrapper .hero-wrapper .subheading {
   color: var(--f-m);
   font-family: mono-300, monospace;
   font-size: var(--f-t-sh);
   letter-spacing: var(--l-s-sh);
   line-height: var(--l-h-sh);
-  -webkit-animation-name: transition-y;
-          animation-name: transition-y;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  animation-name: transition-y;
+  animation-duration: 0.4s;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
   opacity: 0;
   padding-top: 2vh;
   text-decoration: none !important;
   width: 50%;
 }
-
 @keyframes transition-y {
   0% {
-    -webkit-transform: translateY(2vh);
-            transform: translateY(2vh);
+    transform: translateY(2vh);
   }
   to {
     opacity: 1;
   }
 }
-
 .content-wrapper .hero-wrapper .subheading a {
   text-decoration: none;
 }
-
 .content-wrapper .hero-wrapper .subheading a:visited {
   color: var(--f-h) !important;
 }
-
 .content-wrapper .hero-wrapper .subheading a:link {
   color: var(--f-h) !important;
 }
-
 .content-wrapper #projects {
   padding-top: 10vh;
-  -webkit-animation-name: transition-y;
-          animation-name: transition-y;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1.6s;
-          animation-delay: 1.6s;
+  animation-name: transition-y;
+  animation-duration: 0.4s;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.6s;
   opacity: 0;
 }
-
 @keyframes transition-y {
   0% {
-    -webkit-transform: translateY(2vh);
-            transform: translateY(2vh);
+    transform: translateY(2vh);
   }
   to {
     opacity: 1;
   }
 }
-
 .content-wrapper #projects .heading {
   color: var(--f-h);
   font-family: mono-300, monospace;
@@ -181,7 +133,6 @@ body {
   line-height: var(--l-h-bodyp-1);
   color: var(--f-h);
 }
-
 .content-wrapper #projects .subheading {
   color: var(--f-m);
   font-family: mono-300, monospace;
@@ -208,26 +159,18 @@ body {
   font-size: var(--f-t-sh);
   letter-spacing: var(--l-s-sh);
   line-height: var(--l-h-sh);
-  -webkit-animation-name: transition-y;
-          animation-name: transition-y;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  animation-name: transition-y;
+  animation-duration: 0.4s;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
   opacity: 0;
   color: white;
 }
-
 @keyframes transition-y {
   0% {
-    -webkit-transform: translateY(2vh);
-            transform: translateY(2vh);
+    transform: translateY(2vh);
   }
   to {
     opacity: 1;
@@ -241,25 +184,17 @@ body {
   font-size: var(--f-t-sh);
   letter-spacing: var(--l-s-sh);
   line-height: var(--l-h-sh);
-  -webkit-animation-name: transition-y;
-          animation-name: transition-y;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
+  animation-name: transition-y;
+  animation-duration: 0.4s;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
   opacity: 0;
 }
-
 @keyframes transition-y {
   0% {
-    -webkit-transform: translateY(2vh);
-            transform: translateY(2vh);
+    transform: translateY(2vh);
   }
   to {
     opacity: 1;
@@ -267,22 +202,15 @@ body {
 }
 
 .flex-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 #projects .flex-wrapper > div {
   margin-right: 6vw;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 21%;
-          flex: 1 0 21%;
+  flex: 1 0 21%;
   max-width: 33%;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  flex-grow: 0;
   margin-bottom: 5vh;
 }
 
@@ -293,31 +221,20 @@ body {
 */
 .footer-nav {
   width: 80vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
   bottom: 0vh;
   margin-right: 0;
   background-color: var(--a-b);
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-animation-name: transition-y;
-          animation-name: transition-y;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
+  justify-content: space-between;
+  animation-name: transition-y;
+  animation-duration: 0.4s;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.8s;
   opacity: 0;
 }
-
 .footer-nav .lhs {
   color: var(--f-l);
   font-family: heading;
@@ -332,15 +249,12 @@ body {
   opacity: 0.6;
   cursor: auto;
 }
-
 .footer-nav .lhs:hover {
   color: var(--f-m);
 }
-
 .footer-nav .rhs {
   padding-top: 3vh;
 }
-
 .footer-nav .rhs a {
   margin-left: 3vw;
   color: var(--f-l);
@@ -354,21 +268,17 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
 .footer-nav .rhs a:hover {
   color: var(--f-m);
 }
-
 @keyframes transition-y {
   0% {
-    -webkit-transform: translateY(2vh);
-            transform: translateY(2vh);
+    transform: translateY(2vh);
   }
   to {
     opacity: 1;
   }
 }
-
 .footer-nav .heading {
   color: var(--f-h);
   font-family: mono-300, monospace;
@@ -377,7 +287,6 @@ body {
   line-height: var(--l-h-bodyp-1);
   color: var(--f-h);
 }
-
 .footer-nav .subheading {
   color: var(--f-m);
   font-family: mono-300, monospace;
@@ -408,7 +317,6 @@ body {
     padding-top: 6vh;
   }
 }
-
 @media screen and (max-width: 900px) {
   .content-wrapper .hero-wrapper .subheading {
     width: 72%;
@@ -417,13 +325,10 @@ body {
     padding-bottom: 6vh;
   }
   #projects .flex-wrapper > div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 40%;
-            flex: 1 0 40%;
+    flex: 1 0 40%;
     max-width: 36%;
   }
 }
-
 @media screen and (max-width: 560px) {
   .footer-nav .nav-text {
     margin-left: 8vw;
@@ -432,20 +337,16 @@ body {
     width: 100%;
   }
   #projects .flex-wrapper > div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 40%;
-            flex: 1 0 40%;
+    flex: 1 0 40%;
     max-width: 50%;
   }
   #arrow {
     display: none;
   }
   #e81md6xk4sbq1 {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    transform: scale(0.9);
   }
 }
-
 @media screen and (max-width: 420px) {
   .main-wrapper .header-nav {
     padding-top: 6vh !important;
@@ -464,10 +365,7 @@ body {
     padding-top: 8vh;
   }
   #projects .flex-wrapper > div {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+    flex: 1 0 100%;
     max-width: 100%;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
